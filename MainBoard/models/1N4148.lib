@@ -1,0 +1,34 @@
+* 1N4148 Small Signal Diode Model for ngspice
+* Fast switching diode
+* Vrrm = 100V, If = 200mA, trr = 4ns
+*
+* Connections: Anode Cathode
+*
+.model 1N4148 D(
++ IS=5.84E-9         ; Saturation current
++ N=1.94             ; Emission coefficient
++ RS=0.7017          ; Series resistance
++ IKF=44.17E-3       ; High injection knee current
++ XTI=3              ; IS temperature exponent
++ EG=1.11            ; Bandgap voltage (Si)
++ CJO=0.95E-12       ; Zero-bias junction capacitance
++ M=0.55             ; Junction grading coefficient
++ VJ=0.75            ; Junction potential
++ FC=0.5             ; Forward-bias depletion cap coefficient
++ ISR=11.07E-9       ; Recombination saturation current
++ NR=2.088           ; Recombination emission coefficient
++ BV=100             ; Reverse breakdown voltage
++ IBV=100E-6         ; Current at breakdown voltage
++ TT=11.07E-9        ; Transit time
++ TNOM=27            ; Parameter measurement temperature (°C)
++ KF=0               ; Flicker noise coefficient
++ AF=1               ; Flicker noise exponent
++ )
+*
+* Alternative model names for convenience
+.model D1N4148 D(
++ IS=5.84E-9 N=1.94 RS=0.7017 IKF=44.17E-3 XTI=3 EG=1.11
++ CJO=0.95E-12 M=0.55 VJ=0.75 FC=0.5 ISR=11.07E-9 NR=2.088
++ BV=100 IBV=100E-6 TT=11.07E-9 TNOM=27 KF=0 AF=1
++ )
+*

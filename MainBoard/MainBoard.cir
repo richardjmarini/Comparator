@@ -1,0 +1,68 @@
+.title KiCad schematic
+.include "/home/rmarini/Development/Comparator/MainBoard/models/1N4148.lib"
+.include "/home/rmarini/Development/Comparator/MainBoard/models/BC547.lib"
+.include "/home/rmarini/Development/Comparator/MainBoard/models/BC557.lib"
+.save all
+.probe alli
+.probe p(Q2)
+.probe p(D4)
+.probe p(Q1)
+.probe p(D3)
+.probe p(Q5)
+.probe p(V2)
+.probe p(V3)
+.probe p(V1)
+.probe p(D6)
+.probe p(D5)
+.probe p(Q3)
+.probe p(Q7)
+.probe p(Q6)
+.probe p(Q4)
+.probe p(C3)
+.probe p(C1)
+.probe p(C5)
+.probe p(C4)
+.probe p(C6)
+.probe p(C2)
+.probe p(R4)
+.probe p(Q8)
+.probe p(R3)
+.probe p(R1)
+.probe p(R2)
+.options method=gear 
+.options gmin=1e-9 cshunt=1e-12 
+.options reltol=1e-2 abstol=1e-9 vntol=1e-6 
+.options itl1=300 itl4=300 
+.options maxstep=100p
+.options temp=60
+.tran 100u 2500ms
+.control
+run
+plot V(NonInvertingInput) V(InvertingInput) V(Output)
+.endc
+Q2 Net-_Q2-C_ DiffPair +v BC557
+D4 +v DiffPair 1N4148
+Q1 GND NonInvertingInput DiffPair BC557
+D3 NonInvertingInput DiffPair 1N4148
+Q5 Net-_Q2-C_ Net-_Q2-C_ GND BC547
+V2 +v GND DC 12 
+V3 -v GND DC -12 
+V1 NonInvertingInput GND PULSE( 0 10 50n 50n 50n 1000ms 500ms 1 ) 
+D6 InvertingInput DiffPair 1N4148
+D5 +v DiffPair 1N4148
+Q3 Net-_Q3-C_ DiffPair +v BC557
+Q7 Net-_Q7-C_ Net-_Q3-C_ GND BC547
+Q6 Net-_Q3-C_ Net-_Q2-C_ GND BC547
+Q4 GND InvertingInput DiffPair BC557
+C3 +v GND 0.1u
+C1 +v GND 10u
+C5 +v GND 0.1u
+C4 GND -v 0.1u
+C6 GND -v 0.1u
+C2 GND -v 10u
+R4 Net-_R1-Pad2_ InvertingInput 10k
+Q8 Output Net-_Q7-C_ GND BC547
+R3 +v Output 10k
+R1 +v Net-_R1-Pad2_ 1k
+R2 Net-_R1-Pad2_ GND 1k
+.end

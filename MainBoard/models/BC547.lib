@@ -1,0 +1,29 @@
+* BC547 NPN transistor model
+.model BC547 NPN (
++ IS=1.8E-14
++ BF=400
++ NF=1.0
++ VAF=100
++ IKF=0.15
++ ISE=5E-14
++ NE=1.5
++ BR=5
++ NR=1.0
++ VAR=20
++ IKR=0.05
++ ISC=1E-13
++ NC=2
++ RB=100
++ IRB=0.1
++ RBM=10
++ RE=0.5
++ RC=0.25
++ CJE=1E-11
++ VJE=0.65
++ MJE=0.33
++ TF=4E-10
++ CJC=4E-12
++ VJC=0.65
++ MJC=0.33
++ TR=5E-8
+)
