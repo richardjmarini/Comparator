@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef")
 	(paper "A4")
+	(title_block
+		(title "Discrete Comparator")
+		(date "2026-02-25")
+		(rev "0.1")
+	)
 	(lib_symbols
 		(symbol "1761681-3:1761681-3"
 			(pin_names
