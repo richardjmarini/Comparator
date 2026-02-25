@@ -4769,7 +4769,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 153.9748 142.24 0)
 			(effects
 				(font
@@ -4839,7 +4839,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:CP_Radial_D10.0mm_P2.50mm"
 			(at 143.8148 152.4 0)
 			(effects
 				(font
@@ -5104,7 +5104,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "72R020XU:FUSRB510W81L1358T310H1980"
 			(at 116.84 152.4 0)
 			(effects
 				(font
@@ -5211,7 +5211,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:CP_Radial_D10.0mm_P2.50mm"
 			(at 143.8148 142.24 0)
 			(effects
 				(font
@@ -5468,7 +5468,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 165.4048 152.4 0)
 			(effects
 				(font
@@ -5765,7 +5765,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 153.9748 152.4 0)
 			(effects
 				(font
@@ -6340,7 +6340,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
 			(at 52.832 38.1 90)
 			(effects
 				(font
@@ -6531,7 +6531,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 			(at 165.4048 142.24 0)
 			(effects
 				(font
@@ -7215,7 +7215,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
 			(at 273.558 53.34 90)
 			(effects
 				(font
@@ -7604,7 +7604,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "72R020XU:FUSRB510W81L1358T310H1980"
 			(at 116.84 132.08 0)
 			(effects
 				(font
@@ -7712,7 +7712,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
 			(at 230.378 43.18 90)
 			(effects
 				(font
@@ -7904,7 +7904,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
 			(at 52.832 27.94 90)
 			(effects
 				(font
@@ -8413,7 +8413,7 @@
 		(dnp no)
 		(uuid "a94b09fe-f430-4c9e-bc4d-31daec14eb2b")
 		(property "Reference" "D5"
-			(at 160.02 55.8799 90)
+			(at 153.416 53.594 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8422,7 +8422,7 @@
 			)
 		)
 		(property "Value" "1N4148"
-			(at 147.574 56.896 90)
+			(at 158.75 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9091,7 +9091,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
 			(at 146.05 109.982 90)
 			(effects
 				(font
@@ -9229,7 +9229,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
 			(at 273.558 63.5 90)
 			(effects
 				(font
