@@ -1,8 +1,8 @@
 # Comparator
 Discrete Comparator
 
-![schematic_screenshot](images/schematic.png)
-![spice_screenshot](images/plot.png)
+![schematic_screenshot](MainBoard/images/schematic.png)
+![spice_screenshot](MainBoard/images/plot.png)
 
 ## 🛠  Dependencies
 
