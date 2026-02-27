@@ -1,6 +1,9 @@
 # Comparator
 Discrete Comparator
 
+## Schematic
+![schematic_screenshot](MainBoard/images/schematic.png)
+
 ## Runtime & Build
   - **Ubuntu/Debian**:
     ```bash
@@ -17,10 +20,6 @@ Discrete Comparator
     ```
     ngspice MainBoard/MainBoard.cir
     ```
-
-## Schematic
-![schematic_screenshot](MainBoard/images/schematic.png)
-
 ## Simulation(s)
 ### Alternating Signal via Inverting Input
 ![variable_input screenshot](MainBoard/images/variable_input.png)
