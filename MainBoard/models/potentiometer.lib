@@ -1,0 +1,13 @@
+* Linear potentiometer
+* Nodes: 1=top, 2=wiper, 3=bottom
+* Parameters:
+*   Rtot = total resistance
+*   w    = wiper position (0..1)
+
+.SUBCKT POT 1 2 3 PARAMS: Rtot=100k w=0.5
+
+Rtop 1 2 {Rtot*(1-w)}
+Rbot 2 3 {Rtot*w}
+
+.ENDS POT
+
