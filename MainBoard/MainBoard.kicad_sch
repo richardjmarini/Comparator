@@ -3554,12 +3554,6 @@
 		(color 0 0 0 0)
 		(uuid "eb5fcd7e-7039-4381-a0c7-835ff8d32367")
 	)
-	(junction
-		(at 132.08 90.17)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ee4866c8-5e90-4534-b806-e8eb1bb81c35")
-	)
 	(wire
 		(pts
 			(xy 162.56 62.23) (xy 162.56 69.85)
@@ -4439,16 +4433,6 @@
 			(type default)
 		)
 		(uuid "7c60edd1-da48-4f8f-89aa-9383625d8f21")
-	)
-	(wire
-		(pts
-			(xy 132.08 90.17) (xy 135.89 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7c86c878-f8c7-46c7-9a49-f077be2aac7a")
 	)
 	(wire
 		(pts
@@ -6576,7 +6560,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 226.568 102.87 90)
 			(effects
 				(font
@@ -6853,7 +6837,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 104.14 140.97 0)
 			(effects
 				(font
@@ -7026,7 +7010,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-201_P15.24mm_Horizontal"
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 75.565 170.18 0)
 			(effects
 				(font
@@ -7221,7 +7205,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 57.15 130.81 0)
 			(effects
 				(font
@@ -7624,7 +7608,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "THONK_PJ398SM-12"
+		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 			(at 271.78 78.74 0)
 			(effects
 				(font
@@ -8782,7 +8766,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 25.4 130.81 0)
 			(effects
 				(font
@@ -9428,7 +9412,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
 			(at 275.59 38.1 0)
 			(effects
 				(font
@@ -9786,7 +9770,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 213.868 44.45 90)
 			(effects
 				(font
@@ -9986,7 +9970,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 83.82 140.97 0)
 			(effects
 				(font
@@ -10191,8 +10175,8 @@
 		(at 275.59 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp yes)
 		(uuid "9383376a-fea8-4976-ae27-c38ebab1ccb3")
 		(property "Reference" "V5"
@@ -10710,7 +10694,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "THONK_PJ398SM-12"
+		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 			(at 271.78 101.6 0)
 			(effects
 				(font
@@ -10996,7 +10980,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 25.4 140.97 0)
 			(effects
 				(font
@@ -11224,7 +11208,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-201_P15.24mm_Horizontal"
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 75.565 180.34 0)
 			(effects
 				(font
@@ -11311,7 +11295,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "THONK_PJ398SM-12"
+		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 			(at 271.78 25.4 0)
 			(effects
 				(font
@@ -11902,7 +11886,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 139.7 111.252 90)
 			(effects
 				(font
@@ -12039,7 +12023,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Rect_L9.0mm_W2.5mm_P7.50mm_MKT"
 			(at 213.0552 104.14 0)
 			(effects
 				(font
@@ -12109,7 +12093,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 104.14 130.81 0)
 			(effects
 				(font
@@ -12215,7 +12199,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 57.15 140.97 0)
 			(effects
 				(font
@@ -12318,7 +12302,7 @@
 				)
 			)
 		)
-		(property "Footprint" "THONK_PJ398SM-12"
+		(property "Footprint" "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles"
 			(at 24.13 64.77 0)
 			(effects
 				(font
@@ -12432,7 +12416,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
 			(at 83.82 130.81 0)
 			(effects
 				(font
@@ -12829,7 +12813,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Potentiometer_THT:Potentiometer_TT_P0915N"
 			(at 60.96 34.29 0)
 			(effects
 				(font
