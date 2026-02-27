@@ -2,8 +2,10 @@
 Discrete Comparator
 
 ![schematic_screenshot](MainBoard/images/schematic.png)
-![variable_simulation screenshot](MainBoard/images/variable_inverting_input_simulation.png)
-![fixed_simulation screenshot](MainBoard/images/fixed_inverting_input_simulation.png)
+![variable_input screenshot](MainBoard/images/variable_input.png)
+![variable_input_inverted_output screenshot](MainBoard/images/variable_input_inverted_output.png)
+![constant_input screenshot](MainBoard/images/constant_input.png)
+![constant_input_inverted_output screenshot](MainBoard/images/constant_input_inverted_output.png)
 
 ## 🛠  Dependencies
 
