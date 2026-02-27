@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "1761681-3")(type "KiCad")(uri "${KIPRJMOD}/symbols/1761681-3.kicad_sym")(options "")(descr ""))
+  (lib (name "PJ398SM-12")(type "KiCad")(uri "${KIPRJMOD}/symbols/PJ398SM-12.kicad_sym")(options "")(descr ""))
+)
