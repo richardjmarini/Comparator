@@ -621,6 +621,14 @@
     [
       "352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef",
       "Root"
+    ],
+    [
+      "53fe062f-4a00-461a-aeab-8f6e5d0d03e8",
+      "Comparator-1"
+    ],
+    [
+      "db8f590d-63c1-489f-a9c8-ba7af9ba10fc",
+      "Comparator-2"
     ]
   ],
   "text_variables": {}
