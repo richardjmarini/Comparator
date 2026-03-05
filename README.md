@@ -2,7 +2,8 @@
 Discrete Comparator
 
 ## Schematic
-![schematic_screenshot](MainBoard/images/schematic.png)
+![main_screenshot](MainBoard/images/main_schematic.png)
+![comparator_screenshot](MainBoard/images/schematic.png)
 
 ## Runtime & Build
   - **Ubuntu/Debian**:
