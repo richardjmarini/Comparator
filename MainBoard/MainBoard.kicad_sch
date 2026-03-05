@@ -2883,12 +2883,6 @@
 		(uuid "ed7c4a63-df94-472b-9143-dc39c721205c")
 	)
 	(junction
-		(at 265.43 78.74)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0389d7d9-306a-422d-8525-c11dfa4628e7")
-	)
-	(junction
 		(at 59.69 185.42)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2949,10 +2943,10 @@
 		(uuid "3ba11e63-cc43-4dcd-b4e0-b58b017220c1")
 	)
 	(junction
-		(at 265.43 102.87)
+		(at 262.89 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "47a7ff7e-acab-478e-b70c-94183af514c1")
+		(uuid "4aefb0af-4520-4dc2-ac29-298d6848b2b9")
 	)
 	(junction
 		(at 72.39 175.26)
@@ -2973,16 +2967,16 @@
 		(uuid "5393d200-b95d-43cb-8e13-d071cecd37fb")
 	)
 	(junction
+		(at 262.89 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "629c04b7-82dc-4d60-a4fc-fd0b56ae0d0a")
+	)
+	(junction
 		(at 40.64 185.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "63db5e3d-3fe1-4f99-9051-1e844ad8aa69")
-	)
-	(junction
-		(at 262.89 48.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "64183bca-08ea-47ef-8d15-2c367aa264cf")
 	)
 	(junction
 		(at 36.83 171.45)
@@ -3027,12 +3021,6 @@
 		(uuid "8509a0df-5a56-42e1-8cc6-a0bcc83d3475")
 	)
 	(junction
-		(at 262.89 24.13)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8670e08d-8fd7-4c42-9aae-b96d68a2e51e")
-	)
-	(junction
 		(at 99.06 175.26)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3061,6 +3049,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9a7f8d68-90aa-439e-99c2-9b60f7f6e946")
+	)
+	(junction
+		(at 265.43 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ab24890c-96ce-4b2b-ab1f-3c150994dbec")
+	)
+	(junction
+		(at 265.43 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c6010229-b8bc-416a-a7c8-2d62f7a4b310")
 	)
 	(junction
 		(at 59.69 165.1)
@@ -3135,16 +3135,6 @@
 			(type default)
 		)
 		(uuid "0d1161c3-3eb7-4e09-a92a-a5084ad5e97d")
-	)
-	(wire
-		(pts
-			(xy 265.43 101.6) (xy 265.43 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0da7a7a2-4729-4856-b9c2-2ccf4878e8f5")
 	)
 	(wire
 		(pts
@@ -3278,6 +3268,16 @@
 	)
 	(wire
 		(pts
+			(xy 262.89 25.4) (xy 262.89 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c003cca-e871-48b8-8b1f-68c3bcc6f9dd")
+	)
+	(wire
+		(pts
 			(xy 36.83 175.26) (xy 36.83 176.53)
 		)
 		(stroke
@@ -3365,6 +3365,16 @@
 			(type default)
 		)
 		(uuid "48ed7d6f-0626-4b07-ab53-a853c9274823")
+	)
+	(wire
+		(pts
+			(xy 265.43 104.14) (xy 265.43 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4acd8fa3-605e-4af9-96a8-ad6124f17834")
 	)
 	(wire
 		(pts
@@ -3528,7 +3538,7 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 48.26) (xy 262.89 48.26)
+			(xy 257.81 46.99) (xy 262.89 46.99)
 		)
 		(stroke
 			(width 0)
@@ -3585,16 +3595,6 @@
 			(type default)
 		)
 		(uuid "6b2afefe-c7ec-4e6d-a921-607303a8fb6a")
-	)
-	(wire
-		(pts
-			(xy 262.89 22.86) (xy 262.89 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6b91dc1c-c691-4b1c-a4bc-fc65845665a0")
 	)
 	(wire
 		(pts
@@ -3685,16 +3685,6 @@
 			(type default)
 		)
 		(uuid "740532a2-3dc8-46e0-a69c-c0791f99a18d")
-	)
-	(wire
-		(pts
-			(xy 262.89 24.13) (xy 262.89 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7544d92a-408d-4b69-92cc-fd957e7ff2bf")
 	)
 	(wire
 		(pts
@@ -3818,16 +3808,6 @@
 	)
 	(wire
 		(pts
-			(xy 262.89 46.99) (xy 262.89 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89507c85-c600-4981-bb9a-87a4a1cf1c72")
-	)
-	(wire
-		(pts
 			(xy 238.76 106.68) (xy 247.65 106.68)
 		)
 		(stroke
@@ -3878,13 +3858,13 @@
 	)
 	(wire
 		(pts
-			(xy 262.89 48.26) (xy 262.89 49.53)
+			(xy 262.89 49.53) (xy 262.89 52.07)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9147456c-ecd1-401c-bdc6-5ebe4672dbac")
+		(uuid "90559db4-4a68-47b7-b80b-4818a65ed8ad")
 	)
 	(wire
 		(pts
@@ -3998,16 +3978,6 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 77.47) (xy 265.43 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a5ccc0e3-3009-4bc4-ab5d-f7e9df75857e")
-	)
-	(wire
-		(pts
 			(xy 72.39 185.42) (xy 85.09 185.42)
 		)
 		(stroke
@@ -4018,23 +3988,13 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 24.13) (xy 262.89 24.13)
+			(xy 257.81 22.86) (xy 262.89 22.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "a99901f5-60d0-4808-9040-5ed25422685c")
-	)
-	(wire
-		(pts
-			(xy 265.43 78.74) (xy 265.43 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a9ca7ca4-a4de-4959-979c-8ec4f5d9107f")
 	)
 	(wire
 		(pts
@@ -4408,23 +4368,23 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 102.87) (xy 265.43 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dbd7f3ea-c602-4182-aa33-18dfdd5e8546")
-	)
-	(wire
-		(pts
-			(xy 260.35 102.87) (xy 265.43 102.87)
+			(xy 260.35 101.6) (xy 265.43 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "dccf8c3c-b0a5-4dce-a191-0d9cb8632207")
+	)
+	(wire
+		(pts
+			(xy 265.43 80.01) (xy 265.43 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de1dd681-343c-4af7-b291-cdde6f8a757a")
 	)
 	(wire
 		(pts
@@ -4508,7 +4468,7 @@
 	)
 	(wire
 		(pts
-			(xy 260.35 78.74) (xy 265.43 78.74)
+			(xy 260.35 77.47) (xy 265.43 77.47)
 		)
 		(stroke
 			(width 0)
@@ -5735,7 +5695,7 @@
 		(at 273.05 101.6 0)
 		(mirror y)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
@@ -5823,6 +5783,42 @@
 					(size 1.27 1.27)
 				)
 				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/PJ398SM.lib"
+			(at 273.05 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "PJ398SM"
+			(at 273.05 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 273.05 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=S 2=SW 3=T"
+			(at 273.05 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -6041,7 +6037,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 260.35 78.74 0)
+		(at 260.35 77.47 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6050,7 +6046,7 @@
 		(dnp no)
 		(uuid "16bd382a-6682-4626-9213-166dcaa6d802")
 		(property "Reference" "#PWR017"
-			(at 260.35 72.39 0)
+			(at 260.35 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6059,7 +6055,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 260.35 74.93 0)
+			(at 260.35 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6067,7 +6063,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 260.35 78.74 0)
+			(at 260.35 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6076,7 +6072,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 260.35 78.74 0)
+			(at 260.35 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6085,7 +6081,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 260.35 78.74 0)
+			(at 260.35 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6287,7 +6283,7 @@
 		(at 270.51 22.86 0)
 		(mirror y)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
@@ -6375,6 +6371,42 @@
 					(size 1.27 1.27)
 				)
 				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/PJ398SM.lib"
+			(at 270.51 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "PJ398SM"
+			(at 270.51 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 270.51 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=S 2=SW 3=T"
+			(at 270.51 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -6588,7 +6620,7 @@
 		(at 273.05 77.47 0)
 		(mirror y)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
@@ -6676,6 +6708,42 @@
 					(size 1.27 1.27)
 				)
 				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/PJ398SM.lib"
+			(at 273.05 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "PJ398SM"
+			(at 273.05 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 273.05 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=S 2=SW 3=T"
+			(at 273.05 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -7114,7 +7182,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 260.35 102.87 0)
+		(at 260.35 101.6 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7123,7 +7191,7 @@
 		(dnp no)
 		(uuid "5dc90265-6899-4715-9f2b-a09f7c918647")
 		(property "Reference" "#PWR019"
-			(at 260.35 96.52 0)
+			(at 260.35 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7132,7 +7200,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 260.35 99.06 0)
+			(at 260.35 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7140,7 +7208,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 260.35 102.87 0)
+			(at 260.35 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7149,7 +7217,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 260.35 102.87 0)
+			(at 260.35 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7158,7 +7226,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 260.35 102.87 0)
+			(at 260.35 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8457,7 +8525,7 @@
 		(at 270.51 46.99 0)
 		(mirror y)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
@@ -8545,6 +8613,42 @@
 					(size 1.27 1.27)
 				)
 				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/PJ398SM.lib"
+			(at 270.51 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "PJ398SM"
+			(at 270.51 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 270.51 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=S 2=SW 3=T"
+			(at 270.51 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -8873,7 +8977,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 257.81 24.13 0)
+		(at 257.81 22.86 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8882,7 +8986,7 @@
 		(dnp no)
 		(uuid "b4f58aa7-5c06-4359-b437-d6b4a5e3c7d3")
 		(property "Reference" "#PWR05"
-			(at 257.81 17.78 0)
+			(at 257.81 16.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8891,7 +8995,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 257.81 20.32 0)
+			(at 257.81 19.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8899,7 +9003,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 257.81 24.13 0)
+			(at 257.81 22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8908,7 +9012,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 257.81 24.13 0)
+			(at 257.81 22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8917,7 +9021,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 257.81 24.13 0)
+			(at 257.81 22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9113,7 +9217,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 257.81 48.26 0)
+		(at 257.81 46.99 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9122,7 +9226,7 @@
 		(dnp no)
 		(uuid "bd84ecf8-9e88-43ad-b5ec-bf57e038669a")
 		(property "Reference" "#PWR09"
-			(at 257.81 41.91 0)
+			(at 257.81 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9131,7 +9235,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 257.81 44.45 0)
+			(at 257.81 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9139,7 +9243,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 257.81 48.26 0)
+			(at 257.81 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9148,7 +9252,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 257.81 48.26 0)
+			(at 257.81 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9157,7 +9261,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 257.81 48.26 0)
+			(at 257.81 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
