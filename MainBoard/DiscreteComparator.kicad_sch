@@ -144,174 +144,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:D"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Device" "D"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "D_0_1"
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -1319,16 +1151,6 @@
 		)
 		(uuid "f61d3eb2-7e42-434f-a730-827c65b799f3")
 	)
-	(text "Over-voltage\nProtection"
-		(exclude_from_sim no)
-		(at 143.764 129.032 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "fc72001c-0e9e-40bb-83fb-de2b3fb1d25f")
-	)
 	(junction
 		(at 142.24 63.5)
 		(diameter 0)
@@ -1340,12 +1162,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "15263878-4a51-4325-b47d-fa69a8d55dbf")
-	)
-	(junction
-		(at 156.21 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "194da1a5-a946-46af-b6b2-c4b6ffb515d7")
 	)
 	(junction
 		(at 175.26 24.13)
@@ -1418,12 +1234,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c797010d-b274-4d14-a096-377494f11602")
-	)
-	(junction
-		(at 129.54 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cc86f935-924c-43e9-a07c-9450d92d881d")
 	)
 	(junction
 		(at 153.67 71.12)
@@ -1519,16 +1329,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 142.24) (xy 162.56 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "193ad3bd-4f99-41e6-bbe7-18a990045f0c")
-	)
-	(wire
-		(pts
 			(xy 175.26 50.8) (xy 175.26 81.28)
 		)
 		(stroke
@@ -1536,26 +1336,6 @@
 			(type default)
 		)
 		(uuid "1940fe45-b2af-47ee-8f63-b5652ea6de03")
-	)
-	(wire
-		(pts
-			(xy 129.54 140.97) (xy 129.54 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "20553afa-ed1a-4324-a4c1-58edd79f109d")
-	)
-	(wire
-		(pts
-			(xy 156.21 132.08) (xy 156.21 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2098b2d0-ee6c-4cc9-94f1-6029434745a6")
 	)
 	(wire
 		(pts
@@ -1626,16 +1406,6 @@
 			(type default)
 		)
 		(uuid "2e045574-6fbf-4b53-99ba-8b9463c8fa9d")
-	)
-	(wire
-		(pts
-			(xy 129.54 142.24) (xy 135.89 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "30f66bc6-727b-40bd-b9b8-23877f87426d")
 	)
 	(wire
 		(pts
@@ -1726,16 +1496,6 @@
 			(type default)
 		)
 		(uuid "4d886f93-a5c3-4865-ae9e-698e390f7abe")
-	)
-	(wire
-		(pts
-			(xy 129.54 142.24) (xy 129.54 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4de01a63-bddf-4bb3-8831-56e888691383")
 	)
 	(wire
 		(pts
@@ -1969,16 +1729,6 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 151.13) (xy 129.54 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "94a28f35-6f57-4d88-86ed-5c5827a0688f")
-	)
-	(wire
-		(pts
 			(xy 76.2 63.5) (xy 78.74 63.5)
 		)
 		(stroke
@@ -2026,16 +1776,6 @@
 			(type default)
 		)
 		(uuid "a6b9bc6c-affd-4ce5-870c-bad2524660c9")
-	)
-	(wire
-		(pts
-			(xy 156.21 151.13) (xy 156.21 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a83ded1a-f31e-441b-9685-3e32c3603fa2")
 	)
 	(wire
 		(pts
@@ -2119,16 +1859,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 142.24) (xy 156.21 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0913284-d50c-4578-bb38-5341e8a5599f")
-	)
-	(wire
-		(pts
 			(xy 130.81 86.36) (xy 167.64 86.36)
 		)
 		(stroke
@@ -2169,16 +1899,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 140.97) (xy 156.21 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e389bbe3-4685-4ce2-ac7e-106d97c3cfaa")
-	)
-	(wire
-		(pts
 			(xy 119.38 21.59) (xy 119.38 24.13)
 		)
 		(stroke
@@ -2206,16 +1926,6 @@
 			(type default)
 		)
 		(uuid "e54a3a22-8660-480b-94f0-14145c9b8fac")
-	)
-	(wire
-		(pts
-			(xy 129.54 132.08) (xy 129.54 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9adf5e2-b39b-4595-9732-e164716fe4cd")
 	)
 	(wire
 		(pts
@@ -2417,50 +2127,6 @@
 	)
 	(global_label "-v"
 		(shape input)
-		(at 156.21 152.4 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "864d57c5-00d1-454e-97b0-a36d47df51e1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 156.21 157.9252 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "+v"
-		(shape input)
-		(at 129.54 132.08 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "96a16f94-ac92-4682-a6a3-55913e911352")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 129.54 126.5548 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "-v"
-		(shape input)
 		(at 198.12 85.09 270)
 		(fields_autoplaced yes)
 		(effects
@@ -2494,28 +2160,6 @@
 		(uuid "ccdcb464-912f-4134-a52e-8c69f9ab884c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 88.9 127.8248 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "+v"
-		(shape input)
-		(at 156.21 132.08 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d791d85f-d93b-48db-b7e0-1629cbe537d3")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 156.21 126.5548 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2569,28 +2213,6 @@
 			)
 		)
 	)
-	(global_label "-v"
-		(shape input)
-		(at 129.54 152.4 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f315f4a2-7b89-415d-996d-eb85bf41fd67")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 129.54 157.9252 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "+v"
 		(shape input)
 		(at 119.38 21.59 90)
@@ -2615,17 +2237,6 @@
 	)
 	(hierarchical_label "InvertingInput"
 		(shape input)
-		(at 135.89 142.24 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2100048e-b289-44b2-a7e7-c6535c15d63b")
-	)
-	(hierarchical_label "InvertingInput"
-		(shape input)
 		(at 157.48 71.12 0)
 		(effects
 			(font
@@ -2634,17 +2245,6 @@
 			(justify left)
 		)
 		(uuid "5156fcd9-05c2-45d4-9e45-9780e06dbe28")
-	)
-	(hierarchical_label "Output"
-		(shape input)
-		(at 162.56 142.24 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "6a6fb991-1943-4564-a9f6-68f643dff8ff")
 	)
 	(hierarchical_label "NonInvertingInput"
 		(shape input)
@@ -2789,116 +2389,6 @@
 				)
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/db8f590d-63c1-489f-a9c8-ba7af9ba10fc"
 					(reference "Q6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 129.54 137.16 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "16ab7afc-050b-40aa-b8bc-98626db7a768")
-		(property "Reference" "D13"
-			(at 126.238 136.144 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 132.08 134.112 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 129.54 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 129.54 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Diode"
-			(at 129.54 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 129.54 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 129.54 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "models/1N4148.lib"
-			(at 129.54 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "D1N4148"
-			(at 129.54 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "89e1692f-858a-40e0-b169-be1b7023227c")
-		)
-		(pin "2"
-			(uuid "729b3186-f234-4018-a4ab-b46d373e80fe")
-		)
-		(instances
-			(project "MainBoard"
-				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/53fe062f-4a00-461a-aeab-8f6e5d0d03e8"
-					(reference "D13")
-					(unit 1)
-				)
-				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/db8f590d-63c1-489f-a9c8-ba7af9ba10fc"
-					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -4117,116 +3607,6 @@
 				)
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/db8f590d-63c1-489f-a9c8-ba7af9ba10fc"
 					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 156.21 147.32 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9077c827-3571-4e53-86d2-dfdda7495e84")
-		(property "Reference" "D8"
-			(at 152.908 146.304 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 158.75 144.272 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 156.21 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 156.21 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Diode"
-			(at 156.21 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 156.21 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 156.21 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "models/1N4148.lib"
-			(at 156.21 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "D1N4148"
-			(at 156.21 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "62db85c7-459f-4f5b-9f6e-6adac1073429")
-		)
-		(pin "2"
-			(uuid "4d867990-dc47-47b8-afc0-731a6b6ae8e6")
-		)
-		(instances
-			(project "MainBoard"
-				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/53fe062f-4a00-461a-aeab-8f6e5d0d03e8"
-					(reference "D8")
-					(unit 1)
-				)
-				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/db8f590d-63c1-489f-a9c8-ba7af9ba10fc"
-					(reference "D20")
 					(unit 1)
 				)
 			)
@@ -5481,226 +4861,6 @@
 				)
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/db8f590d-63c1-489f-a9c8-ba7af9ba10fc"
 					(reference "Q9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 129.54 147.32 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e7a65e94-978e-4fa2-a2d2-b84088fa8203")
-		(property "Reference" "D14"
-			(at 126.238 146.304 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 132.08 144.272 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 129.54 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 129.54 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Diode"
-			(at 129.54 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 129.54 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 129.54 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "models/1N4148.lib"
-			(at 129.54 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "D1N4148"
-			(at 129.54 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bdfed224-2cbe-493a-a6ec-917fc7f02c28")
-		)
-		(pin "2"
-			(uuid "5dc29475-e905-4a07-8e2f-5810e64a39ad")
-		)
-		(instances
-			(project "MainBoard"
-				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/53fe062f-4a00-461a-aeab-8f6e5d0d03e8"
-					(reference "D14")
-					(unit 1)
-				)
-				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/db8f590d-63c1-489f-a9c8-ba7af9ba10fc"
-					(reference "D19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 156.21 137.16 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ec2e0669-aea2-4699-972c-6ea374e25b89")
-		(property "Reference" "D7"
-			(at 152.908 136.144 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 158.75 134.112 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 156.21 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 156.21 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Diode"
-			(at 156.21 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 156.21 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 156.21 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "models/1N4148.lib"
-			(at 156.21 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "D1N4148"
-			(at 156.21 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3311c271-b2c8-4a9c-99d7-39b790671438")
-		)
-		(pin "2"
-			(uuid "a428b019-d4a5-4616-be62-504d4c5d20cc")
-		)
-		(instances
-			(project "MainBoard"
-				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/53fe062f-4a00-461a-aeab-8f6e5d0d03e8"
-					(reference "D7")
-					(unit 1)
-				)
-				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/db8f590d-63c1-489f-a9c8-ba7af9ba10fc"
-					(reference "D10")
 					(unit 1)
 				)
 			)
