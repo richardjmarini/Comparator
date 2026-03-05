@@ -27,3 +27,5 @@ Discrete Comparator
 ### Constant Signal via Inverting Input
 ![constant_input screenshot](MainBoard/images/constant_input.png)
 ![constant_input_inverted_output screenshot](MainBoard/images/constant_input_inverted_output.png)
+### Window Comparator Mode
+![window_comparator screenshot](MainBoard/images/window_comparator_mode.png)
