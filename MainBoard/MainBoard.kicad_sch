@@ -2831,6 +2831,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Pull-up\nResistor"
+		(exclude_from_sim no)
+		(at 225.806 87.884 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "024340e7-3f54-496b-9bde-5377469b4972")
+	)
 	(text "Pull-down\nResistor"
 		(exclude_from_sim no)
 		(at 234.696 126.238 90)
@@ -2851,6 +2861,16 @@
 			(justify left)
 		)
 		(uuid "6eaa6a84-38e2-46a2-b75d-3572b0d5ee2e")
+	)
+	(text "Pull-up\nResistor"
+		(exclude_from_sim no)
+		(at 224.536 24.384 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "af29a74b-7f48-4373-8ff2-3fe748e54e4d")
 	)
 	(text "Threshold"
 		(exclude_from_sim no)
@@ -3960,6 +3980,16 @@
 	)
 	(wire
 		(pts
+			(xy 229.87 85.09) (xy 229.87 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85bdea93-1010-4dcf-815b-0ac1e016a5c8")
+	)
+	(wire
+		(pts
 			(xy 44.45 21.59) (xy 44.45 22.86)
 		)
 		(stroke
@@ -4487,6 +4517,16 @@
 			(type default)
 		)
 		(uuid "cf52edce-1bc2-4ad0-8a8a-568c13677b4c")
+	)
+	(wire
+		(pts
+			(xy 228.6 21.59) (xy 228.6 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfaa5705-5fe7-4f3d-84db-16a4029a4138")
 	)
 	(wire
 		(pts
@@ -5146,6 +5186,28 @@
 	)
 	(global_label "+v"
 		(shape input)
+		(at 228.6 21.59 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3c4db1c1-10de-4858-b5a1-2f02f6bcfda6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 228.6 16.0648 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "+v"
+		(shape input)
 		(at 254 109.22 90)
 		(fields_autoplaced yes)
 		(effects
@@ -5355,6 +5417,28 @@
 		(uuid "8d751cfe-e3a8-4c66-87c9-4547e1b32d83")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 109.22 157.0348 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "+v"
+		(shape input)
+		(at 229.87 85.09 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "91c5f335-4228-4ce6-a45a-2662f7be7787")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 229.87 79.5648 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9029,6 +9113,77 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 228.6 27.94 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "89558875-dd1c-4fb4-a749-589f9b21fb5a")
+		(property "Reference" "R2"
+			(at 231.14 26.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 231.14 29.2099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 230.378 27.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 228.6 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 228.6 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "392c9d07-fe43-46b6-9c2e-d9eb0b98bb44")
+		)
+		(pin "1"
+			(uuid "27908ccb-638d-4acb-9504-d486a50eece4")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Polyfuse")
 		(at 49.53 165.1 270)
 		(mirror x)
@@ -10764,6 +10919,77 @@
 			(project "MainBoard"
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
 					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 229.87 91.44 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c5cab868-53a2-475d-af8c-28a1207df6c4")
+		(property "Reference" "R3"
+			(at 232.41 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 232.41 92.7099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 231.648 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 229.87 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 229.87 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8da8deb1-f191-4c0e-9c0e-632e3a5d5098")
+		)
+		(pin "1"
+			(uuid "c5e118a0-b5f6-44a8-9568-6e4bfe91728f")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "R3")
 					(unit 1)
 				)
 			)
