@@ -1131,6 +1131,16 @@
 		)
 		(uuid "86f227f6-1475-4a2a-9d1a-3ee910baa79e")
 	)
+	(text "open-collector"
+		(exclude_from_sim no)
+		(at 217.932 86.868 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "d275d260-543a-46a7-b88b-314c98a5b593")
+	)
 	(text "Hysteresis"
 		(exclude_from_sim no)
 		(at 143.002 136.652 0)
