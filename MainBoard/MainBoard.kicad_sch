@@ -3266,7 +3266,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 95.25) (xy 265.43 95.25)
+			(xy 229.87 95.25) (xy 254 95.25)
 		)
 		(stroke
 			(width 0)
@@ -4456,6 +4456,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 95.25) (xy 265.43 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4c928dd-5bb5-443a-b7ea-2e5521fd3615")
+	)
+	(wire
+		(pts
 			(xy 33.02 91.44) (xy 49.53 91.44)
 		)
 		(stroke
@@ -5025,6 +5035,16 @@
 		)
 		(uuid "8b516091-2ae0-4c6f-b7a8-4513dcc9f8bb")
 	)
+	(label "NC_J8P2"
+		(at 257.81 92.71 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "968d8daa-1886-44f4-8ab9-880e78da17e0")
+	)
 	(label "{slash}Comparator-1{slash}InvertingInput"
 		(at 120.65 132.08 0)
 		(effects
@@ -5075,16 +5095,6 @@
 			(justify left bottom)
 		)
 		(uuid "bb794dbb-a225-42b2-9208-37c03df98d9a")
-	)
-	(label "{slash}Comparator-1{slash}Output"
-		(at 257.81 92.71 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c480ff10-7a06-493a-9588-0ce7a1d009f2")
 	)
 	(label "{slash}Comparator-2{slash}NonInvertingInput"
 		(at 116.84 85.09 180)
@@ -9661,6 +9671,74 @@
 			(project "MainBoard"
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
 					(reference "D27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 257.81 95.25 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8b40419e-7d7a-4f95-a8d6-9737fa793e8d")
+		(property "Reference" "R14"
+			(at 258.064 98.552 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 258.064 101.092 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 257.81 93.472 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 257.81 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a4d2256d-834f-4d2c-8ef9-4879f19bbdda")
+		)
+		(pin "1"
+			(uuid "a01d3c4a-5edc-4841-98b3-8e9439e0070c")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "R14")
 					(unit 1)
 				)
 			)
