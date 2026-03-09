@@ -3265,7 +3265,7 @@
 		(dnp no)
 		(uuid "81a97c34-9db4-4ab0-b965-b5ce4b1f245d")
 		(property "Reference" "Q28"
-			(at 190.754 94.234 0)
+			(at 193.294 104.648 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3274,7 +3274,7 @@
 			)
 		)
 		(property "Value" "BC547"
-			(at 190.754 96.774 0)
+			(at 191.008 106.934 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4046,10 +4046,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b47b54e3-3d7f-41d1-9485-972dbcebdec7")
 		(property "Reference" "Q29"
-			(at 190.5 104.1399 0)
+			(at 178.816 107.696 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4058,7 +4057,7 @@
 			)
 		)
 		(property "Value" "BC547"
-			(at 190.5 106.6799 0)
+			(at 178.816 110.236 0)
 			(effects
 				(font
 					(size 1.27 1.27)
