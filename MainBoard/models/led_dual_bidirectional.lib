@@ -1,0 +1,20 @@
+* Pins: P1, P2, COM (common)
+
+.subckt LED_Dual_Bidirectional P1 P2 COM
+
+D1 P1 COM LED_model
+D2 P2 COM LED_model
+
+.model LED_model D (
++  IS=1e-20
++  N=1.8
++  RS=4
++  CJO=20p
++  VJ=2.0
++  EG=1.9
++  XTI=3
++  BV=5
++  IBV=10u
+)
+
+.ends LED_Dual_Bidirectional
