@@ -3111,7 +3111,7 @@
 		)
 		(uuid "4a86bc94-057a-4c24-9a3d-1ada699093ff")
 	)
-	(text ".options method=gear gmin=1e-9 cshunt=1e-12 \n.options reltol=1e-2 abstol=1e-9 vntol=1e-6 \n.options itl1=300 itl4=300 \n.options maxstep=100p temp=60\n.tran 100u 1000ms\n.control\nrun\nplot V(\"/root/Comparator-1/NonInvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/root/Comparator-1/Output\") title \"Comparator1 Output\" \nplot V(\"/root/Comparator-1/NonInvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/Comparator-1-InvertedOutput\") title \"Comparator1 Inverted-Output\"\nplot V(\"/root/Comparator-2/InvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\")   \n     + V(\"/root/Comparator-2/Output\") title \"Comparator2 Output\" \nplot V(\"/root/Comparator-2/InvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/Comparator-2-InvertedOutput\") title \"Comparator2 Inverted-Output\"\n.endc"
+	(text ".options method=gear gmin=1e-9 cshunt=1e-12 \n.options reltol=1e-2 abstol=1e-9 vntol=1e-6 \n.options itl1=300 itl4=300 \n.options maxstep=100p temp=60\n.tran 100u 1000ms\n.control\nrun\nplot V(\"/root/Comparator-1/NonInvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/Output-1\") title \"Comparator1 Output\" \nplot V(\"/root/Comparator-1/NonInvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/InvertedOutput-1\") title \"Comparator1 Inverted-Output\"\nplot V(\"/root/Comparator-2/InvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\")   \n     + V(\"/Output-2\") title \"Comparator2 Output\" \nplot V(\"/root/Comparator-2/InvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/InvertedOutput-2\") title \"Comparator2 Inverted-Output\"\n.endc"
 		(exclude_from_sim no)
 		(at 170.688 147.066 0)
 		(effects
@@ -3209,6 +3209,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "21148736-9682-424b-9e17-7e9d9a3630ef")
+	)
+	(junction
+		(at 250.19 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "22882fff-cd9e-449a-baaa-5e9faa06e9b1")
 	)
 	(junction
 		(at 49.53 29.21)
@@ -3323,12 +3329,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7d3938cb-fd65-41a4-92b0-2d5d69ccfd87")
-	)
-	(junction
-		(at 250.19 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7d3b5d57-b19a-49ee-a473-8464a303567c")
 	)
 	(junction
 		(at 62.23 116.84)
@@ -3974,7 +3974,27 @@
 	)
 	(wire
 		(pts
-			(xy 254 57.15) (xy 254 53.34)
+			(xy 250.19 33.02) (xy 251.46 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b16545c-1bfa-437b-9d83-4d725b1671b6")
+	)
+	(wire
+		(pts
+			(xy 254 113.03) (xy 254 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bc22649-de2d-428b-b4c3-7af7969b266d")
+	)
+	(wire
+		(pts
+			(xy 222.25 53.34) (xy 226.06 53.34)
 		)
 		(stroke
 			(width 0)
@@ -3984,7 +4004,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 33.02) (xy 250.19 29.21)
+			(xy 213.36 29.21) (xy 217.17 29.21)
 		)
 		(stroke
 			(width 0)
@@ -4001,6 +4021,16 @@
 			(type default)
 		)
 		(uuid "5d17db79-ab57-4878-9fcc-e0c56f4cf696")
+	)
+	(wire
+		(pts
+			(xy 254 53.34) (xy 254 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5eed2c2d-3405-493d-b788-a6a7a3c646a0")
 	)
 	(wire
 		(pts
@@ -4424,7 +4454,17 @@
 	)
 	(wire
 		(pts
-			(xy 254 116.84) (xy 254 113.03)
+			(xy 254 116.84) (xy 255.27 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "895e3e44-c8a8-4343-9a81-ffe867537a22")
+	)
+	(wire
+		(pts
+			(xy 223.52 113.03) (xy 227.33 113.03)
 		)
 		(stroke
 			(width 0)
@@ -4664,7 +4704,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 92.71) (xy 250.19 88.9)
+			(xy 213.36 88.9) (xy 217.17 88.9)
 		)
 		(stroke
 			(width 0)
@@ -4844,6 +4884,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 92.71) (xy 251.46 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b91fa450-152d-4a9b-910f-d5cf653c9a55")
+	)
+	(wire
+		(pts
 			(xy 67.31 100.33) (xy 67.31 101.6)
 		)
 		(stroke
@@ -4851,6 +4901,16 @@
 			(type default)
 		)
 		(uuid "bd0b2a4e-4f7c-4cd8-8149-e362a0fbe105")
+	)
+	(wire
+		(pts
+			(xy 254 57.15) (xy 255.27 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd8e7a29-5c75-4599-8af3-a3b4e807522a")
 	)
 	(wire
 		(pts
@@ -5254,6 +5314,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 88.9) (xy 250.19 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edfeb7a7-36e4-4115-91ba-4d3cdf04c267")
+	)
+	(wire
+		(pts
 			(xy 59.69 165.1) (xy 63.5 165.1)
 		)
 		(stroke
@@ -5324,6 +5394,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 29.21) (xy 250.19 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4a8a43e-757a-4337-a11f-ef5de297e3e6")
+	)
+	(wire
+		(pts
 			(xy 44.45 134.62) (xy 31.75 134.62)
 		)
 		(stroke
@@ -5382,13 +5462,33 @@
 		)
 		(uuid "fd363a7a-6773-4602-ae4f-4484f36c5825")
 	)
-	(label "Comparator-2-InvertedOutput"
-		(at 254 116.84 0)
+	(label "Output-2"
+		(at 251.46 92.71 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
+		)
+		(uuid "01d0a023-66c4-40c5-a71f-f9754c6818c3")
+	)
+	(label "Output-1"
+		(at 251.46 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "027da07d-18d2-4772-b201-f9ec9ea4e017")
+	)
+	(label "Comparator-2-InvertedOutput"
+		(at 223.52 113.03 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
 		)
 		(uuid "0af0ab5f-db2f-4781-9745-0b00a201a5cf")
 	)
@@ -5403,23 +5503,23 @@
 		(uuid "184c9f5e-1e3b-4205-99c1-76442ac7d8c7")
 	)
 	(label "{slash}Comparator-2{slash}Output"
-		(at 250.19 92.71 0)
+		(at 213.36 88.9 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "20fd5a1f-b5d1-43c1-86d0-2ef373f6b561")
 		(property "Netclass" ""
-			(at 250.19 93.98 0)
+			(at 213.36 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -5464,22 +5564,22 @@
 		(uuid "5be0ce58-ddfe-42f8-bf86-646dcd845e56")
 	)
 	(label "Comparator-1-InvertedOutput"
-		(at 254 57.15 0)
+		(at 222.25 53.34 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "68496cda-88e6-4d75-a96d-611eebe42d39")
 	)
 	(label "{slash}Comparator-1{slash}Output"
-		(at 250.19 33.02 0)
+		(at 213.36 29.21 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "7728c672-1e1a-44c3-a300-0b8b9b0684d0")
 	)
@@ -5573,6 +5673,26 @@
 			(justify right bottom)
 		)
 		(uuid "c5460d3c-fbdf-4c7c-bb73-ff11940c93f2")
+	)
+	(label "InvertedOutput-1"
+		(at 255.27 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e7202703-2b7d-4ab4-8663-9d98eccec956")
+	)
+	(label "InvertedOutput-2"
+		(at 255.27 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f6e77153-5f51-4131-9124-2b62560a94e6")
 	)
 	(global_label "+v"
 		(shape input)
