@@ -1035,6 +1035,294 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:LED_Dual_Bidirectional"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 5.715 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED_Dual_Bidirectional"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Dual LED, bidirectional"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode bicolor dual"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_Dual_Bidirectional_0_1"
+				(polyline
+					(pts
+						(xy -4.572 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -2.032 0)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 3.81) (xy -1.016 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 -1.27) (xy -1.016 -3.81) (xy 1.27 -2.54) (xy -1.016 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 4.572)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 3.81) (xy 1.27 1.27) (xy -1.016 2.54) (xy 1.27 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 -3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 2.54) (xy -2.032 2.54) (xy -2.032 -2.54) (xy 2.286 -2.54) (xy 2.286 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.286 0)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 4.318) (xy 4.318 5.842) (xy 3.556 5.842)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.064 3.048) (xy 5.588 4.572) (xy 4.826 4.572)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.064 0) (xy 2.286 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.318 5.842) (xy 4.318 5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.588 4.572) (xy 5.588 3.81)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_Dual_Bidirectional_1_1"
+				(pin input line
+					(at -7.62 0 0)
+					(length 3.048)
+					(name "AK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "KA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:Polyfuse"
 			(pin_numbers
 				(hide yes)
@@ -3229,6 +3517,12 @@
 		(uuid "29f88d9b-d5e4-4a52-ac94-0b83476e2f1d")
 	)
 	(junction
+		(at 254 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2f0cf296-ca98-4cb5-87bd-15d5e82b0304")
+	)
+	(junction
 		(at 48.26 165.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3257,6 +3551,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3ba11e63-cc43-4dcd-b4e0-b58b017220c1")
+	)
+	(junction
+		(at 250.19 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e12bcd4-f17e-4ebe-8917-254c3ecc5d05")
+	)
+	(junction
+		(at 254 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "444bab88-fc06-4362-9328-43ddbbfea8c0")
 	)
 	(junction
 		(at 227.33 100.33)
@@ -3377,6 +3683,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9a7f8d68-90aa-439e-99c2-9b60f7f6e946")
+	)
+	(junction
+		(at 250.19 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a914724f-123b-4e59-a1bd-cf7de1bc363d")
 	)
 	(junction
 		(at 254 113.03)
@@ -3521,6 +3833,16 @@
 			(type default)
 		)
 		(uuid "0dbc60b5-4b48-4c5f-836d-02340618695f")
+	)
+	(wire
+		(pts
+			(xy 250.19 31.75) (xy 250.19 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ed27802-4247-4c41-bd35-0b0dab02251d")
 	)
 	(wire
 		(pts
@@ -3974,7 +4296,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 33.02) (xy 251.46 33.02)
+			(xy 250.19 31.75) (xy 251.46 31.75)
 		)
 		(stroke
 			(width 0)
@@ -4021,16 +4343,6 @@
 			(type default)
 		)
 		(uuid "5d17db79-ab57-4878-9fcc-e0c56f4cf696")
-	)
-	(wire
-		(pts
-			(xy 254 53.34) (xy 254 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5eed2c2d-3405-493d-b788-a6a7a3c646a0")
 	)
 	(wire
 		(pts
@@ -4351,6 +4663,16 @@
 			(type default)
 		)
 		(uuid "75b35ed9-9fd4-40a2-af86-689aaec0011d")
+	)
+	(wire
+		(pts
+			(xy 250.19 91.44) (xy 250.19 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76f77af4-65d8-4a7d-979f-d74441a18084")
 	)
 	(wire
 		(pts
@@ -4724,6 +5046,16 @@
 	)
 	(wire
 		(pts
+			(xy 254 116.84) (xy 254 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6bd888b-9ddb-4b7d-abec-6e16c9551c3e")
+	)
+	(wire
+		(pts
 			(xy 86.36 185.42) (xy 96.52 185.42)
 		)
 		(stroke
@@ -4884,7 +5216,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 92.71) (xy 251.46 92.71)
+			(xy 250.19 91.44) (xy 251.46 91.44)
 		)
 		(stroke
 			(width 0)
@@ -5314,7 +5646,17 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 88.9) (xy 250.19 92.71)
+			(xy 254 57.15) (xy 254 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed22451e-ef35-4172-a544-5f05c8660ad5")
+	)
+	(wire
+		(pts
+			(xy 250.19 88.9) (xy 250.19 91.44)
 		)
 		(stroke
 			(width 0)
@@ -5394,7 +5736,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 29.21) (xy 250.19 33.02)
+			(xy 250.19 29.21) (xy 250.19 31.75)
 		)
 		(stroke
 			(width 0)
@@ -5462,8 +5804,18 @@
 		)
 		(uuid "fd363a7a-6773-4602-ae4f-4484f36c5825")
 	)
+	(wire
+		(pts
+			(xy 254 53.34) (xy 254 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd9c01fd-e7e4-41c8-ad57-b063b47b5a10")
+	)
 	(label "Output-2"
-		(at 251.46 92.71 0)
+		(at 251.46 91.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5473,7 +5825,7 @@
 		(uuid "01d0a023-66c4-40c5-a71f-f9754c6818c3")
 	)
 	(label "Output-1"
-		(at 251.46 33.02 0)
+		(at 251.46 31.75 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6409,7 +6761,7 @@
 		(fields_autoplaced yes)
 		(uuid "030082c2-269b-45f3-b4bc-c22b43052af6")
 		(property "Reference" "R1"
-			(at 228.6 59.6901 0)
+			(at 228.6 57.1499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6417,8 +6769,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
-			(at 228.6 57.1501 0)
+		(property "Value" "1k"
+			(at 228.6 59.6899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7046,7 +7398,7 @@
 		(dnp no)
 		(uuid "12319d60-ac2b-4bcc-b1a8-55be6df009b5")
 		(property "Reference" "J9"
-			(at 265.43 113.792 0)
+			(at 265.43 113.538 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8975,6 +9327,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 269.24 40.64 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5a2e697b-5925-4178-acad-05fbce8bec5b")
+		(property "Reference" "R15"
+			(at 271.526 38.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 271.78 43.434 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 269.24 38.862 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 269.24 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 269.24 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6d60b98c-0e2b-42f5-b483-7d95c6848809")
+		)
+		(pin "1"
+			(uuid "0c86ef18-d00e-46e2-8250-9a4ebd21cf17")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 248.92 107.95 0)
 		(mirror x)
@@ -9035,6 +9455,138 @@
 			(project "MainBoard"
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
 					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 276.86 66.04 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5e1cf0a9-c5c9-4764-8bb7-18b9e52094dc")
+		(property "Reference" "#PWR04"
+			(at 283.21 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 280.67 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 276.86 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 276.86 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 276.86 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7d29585c-3df8-40cb-a4c6-49a05c73eb54")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 273.05 100.33 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5f5f74c5-3018-4ded-8c4a-f5fb05a93970")
+		(property "Reference" "#PWR013"
+			(at 279.4 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 276.86 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 273.05 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 273.05 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 273.05 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bb34716b-5822-4705-9218-f06b0c16d122")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -9555,6 +10107,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 276.86 125.73 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "78646f3f-53ab-4fdb-bc4c-b7d581da408e")
+		(property "Reference" "#PWR014"
+			(at 283.21 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 280.67 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 276.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 276.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 276.86 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0efcb518-cdcc-45c9-bfec-4f431be0e5e0")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D_Shockley")
 		(at 113.03 165.1 0)
 		(unit 1)
@@ -9652,6 +10270,109 @@
 			(project ""
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
 					(reference "D19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Dual_Bidirectional")
+		(at 261.62 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7d29eb1c-a9a9-474c-9da7-00e270066cfe")
+		(property "Reference" "D34"
+			(at 270.002 122.682 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED_Dual_Bidirectional"
+			(at 265.938 118.364 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 261.62 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 261.62 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual LED, bidirectional"
+			(at 261.62 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/led_dual_bidirectional.lib"
+			(at 261.62 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "LED_Dual_Bidirectional"
+			(at 261.62 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 261.62 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=P1 2=P2"
+			(at 261.62 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3f208fa5-83f5-415f-a7f8-031f692e6f6f")
+		)
+		(pin "1"
+			(uuid "37331f7f-f784-4eed-962b-77c5d38b1d4e")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "D34")
 					(unit 1)
 				)
 			)
@@ -9894,6 +10615,109 @@
 			(project "MainBoard"
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Dual_Bidirectional")
+		(at 257.81 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8062b16b-6ca7-43b5-9dba-95c5e05759ed")
+		(property "Reference" "D33"
+			(at 266.192 97.282 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED_Dual_Bidirectional"
+			(at 262.128 92.964 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 257.81 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual LED, bidirectional"
+			(at 257.81 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/led_dual_bidirectional.lib"
+			(at 257.81 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "LED_Dual_Bidirectional"
+			(at 257.81 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 257.81 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=P1 2=P2"
+			(at 257.81 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ee05735f-8b4d-428d-87c3-f55aa6de941d")
+		)
+		(pin "1"
+			(uuid "4b9d7d65-116f-49c0-906a-b9d36f5baa49")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "D33")
 					(unit 1)
 				)
 			)
@@ -11036,7 +11860,7 @@
 		(dnp no)
 		(uuid "9b975788-95ae-4da2-8e60-1813ee49100f")
 		(property "Reference" "J5"
-			(at 265.43 54.102 0)
+			(at 265.43 53.594 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11170,6 +11994,109 @@
 			(project "MainBoard"
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
 					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Dual_Bidirectional")
+		(at 257.81 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9e5ff3e4-5165-48cc-80cd-6b90d196cd2f")
+		(property "Reference" "D31"
+			(at 266.192 37.592 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED_Dual_Bidirectional"
+			(at 262.636 33.528 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 257.81 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual LED, bidirectional"
+			(at 257.81 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/led_dual_bidirectional.lib"
+			(at 257.81 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "LED_Dual_Bidirectional"
+			(at 257.81 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 257.81 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=P1 2=P2"
+			(at 257.81 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7623a5e2-1f8f-4a41-932b-db604d866cfc")
+		)
+		(pin "1"
+			(uuid "ca55817a-e852-47a0-8be8-72754fda597b")
+		)
+		(instances
+			(project ""
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "D31")
 					(unit 1)
 				)
 			)
@@ -11417,6 +12344,177 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED_Dual_Bidirectional")
+		(at 261.62 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a6ecc620-66e9-4954-bf51-c165eb381577")
+		(property "Reference" "D32"
+			(at 270.002 62.992 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED_Dual_Bidirectional"
+			(at 266.192 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 261.62 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 261.62 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual LED, bidirectional"
+			(at 261.62 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/led_dual_bidirectional.lib"
+			(at 261.62 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "LED_Dual_Bidirectional"
+			(at 261.62 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 261.62 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=P1 2=P2"
+			(at 261.62 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7214721e-f8fe-488f-86a6-17c8914625c9")
+		)
+		(pin "1"
+			(uuid "022af51c-ec19-48b2-8736-e05d6c31550a")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "D32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 269.24 100.33 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "aac881f1-1d57-4f0f-ac8f-902c7da7bd43")
+		(property "Reference" "R17"
+			(at 271.78 103.378 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 271.78 105.918 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 269.24 98.552 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 269.24 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 269.24 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "05ce958c-3cd2-4cc2-964e-f26485777f08")
+		)
+		(pin "1"
+			(uuid "8f6b6303-2a37-40c4-9f91-3a1165b100d2")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Diode:1N53xxB")
 		(at 76.2 180.34 90)
 		(mirror x)
@@ -11649,6 +12747,74 @@
 			(project ""
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
 					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 273.05 66.04 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b2ceb3ec-ded1-4afa-abb3-fc55827f2983")
+		(property "Reference" "R16"
+			(at 275.59 69.088 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 275.59 71.628 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 273.05 64.262 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 273.05 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 273.05 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d65982aa-8d3f-4b90-8b1a-8c5cdcca4f02")
+		)
+		(pin "1"
+			(uuid "c3041fc0-cc73-4d3d-aef3-b30bb0d8e6f5")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -12107,7 +13273,7 @@
 		(fields_autoplaced yes)
 		(uuid "bdafa08f-bd36-4e74-b3de-ab7101d483de")
 		(property "Reference" "R5"
-			(at 229.87 119.3801 0)
+			(at 229.87 116.8399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12115,8 +13281,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
-			(at 229.87 116.8401 0)
+		(property "Value" "1k"
+			(at 229.87 119.3799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12657,6 +13823,74 @@
 			(project "MainBoard"
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
 					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 273.05 125.73 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d31521c3-4141-408d-9c12-99f6c3082475")
+		(property "Reference" "R18"
+			(at 275.59 128.778 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 275.59 131.318 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 273.05 123.952 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 273.05 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 273.05 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a0f6a4de-9976-4561-9a64-6a9c53a4bfc6")
+		)
+		(pin "1"
+			(uuid "be7c09ea-129b-4284-b282-3526aeb43842")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -13788,6 +15022,72 @@
 			(project "Comparator"
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
 					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 273.05 40.64 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f9fe36ed-b4a4-4fab-9d37-313220b2c20a")
+		(property "Reference" "#PWR03"
+			(at 279.4 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 276.86 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 273.05 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 273.05 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 273.05 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aebfd781-3c38-4edc-91e6-8cbeeeb81b2f")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
