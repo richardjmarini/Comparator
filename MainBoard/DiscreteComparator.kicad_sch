@@ -2123,7 +2123,7 @@
 		(uuid "cf25b204-dc76-4ad2-96d4-02ca385835cf")
 	)
 	(hierarchical_label "Output"
-		(shape input)
+		(shape output)
 		(at 220.98 88.9 0)
 		(effects
 			(font
