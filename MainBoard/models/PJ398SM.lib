@@ -1,6 +1,7 @@
+* No R_sleeve here — ground connection handled externally
+
 .subckt PJ398SM S SW T
 
 R_normal  T SW  1m       ; SW always connected to T (no plug inserted)
-* No R_sleeve here — ground connection handled externally
 
-.ends PJ398SM
+.ends

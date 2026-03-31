@@ -629,6 +629,10 @@
     [
       "db8f590d-63c1-489f-a9c8-ba7af9ba10fc",
       "Comparator-2"
+    ],
+    [
+      "a32d4096-98d0-4ae1-9e53-91c41f554141",
+      "PowerSupply"
     ]
   ],
   "text_variables": {}
