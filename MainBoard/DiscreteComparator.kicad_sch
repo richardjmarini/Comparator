@@ -2014,17 +2014,6 @@
 	)
 	(hierarchical_label "-v"
 		(shape input)
-		(at 119.38 102.87 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "0a0c5c1a-bffe-470a-b899-1e20403cb7c6")
-	)
-	(hierarchical_label "-v"
-		(shape input)
 		(at 113.03 118.11 270)
 		(effects
 			(font

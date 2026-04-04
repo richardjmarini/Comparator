@@ -2079,7 +2079,7 @@
 		)
 		(uuid "4a86bc94-057a-4c24-9a3d-1ada699093ff")
 	)
-	(text ".options method=gear gmin=1e-9 cshunt=1e-12 \n.options reltol=1e-2 abstol=1e-9 vntol=1e-6 \n.options itl1=300 itl4=300 \n.options maxstep=100p temp=60\n.tran 100u 1000ms\n.control\nrun\nplot V(\"/root/Comparator-1/NonInvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/Output-1\") title \"Comparator1 Output\" \nplot V(\"/root/Comparator-1/NonInvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/InvertedOutput-1\") title \"Comparator1 Inverted-Output\"\nplot V(\"/root/Comparator-2/InvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\")   \n     + V(\"/Output-2\") title \"Comparator2 Output\" \nplot V(\"/root/Comparator-2/InvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/InvertedOutput-2\") title \"Comparator2 Inverted-Output\"\n.endc"
+	(text ".options method=gear gmin=1e-9 cshunt=1e-12 \n.options reltol=1e-2 abstol=1e-9 vntol=1e-6 \n.options itl1=300 itl4=300 \n.options maxstep=100u temp=60\n.ic V(Net-_D35-K_)=12 V(Net-_D36-A_)=-12\n.tran 10ms 1s\n.control\nrun\nplot V(\"/root/Comparator-1/NonInvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/Output-1\") title \"Comparator1 Output\" \nplot V(\"/root/Comparator-1/NonInvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/InvertedOutput-1\") title \"Comparator1 Inverted-Output\"\nplot V(\"/root/Comparator-2/InvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\")   \n     + V(\"/Output-2\") title \"Comparator2 Output\" \nplot V(\"/root/Comparator-2/InvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\") V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/InvertedOutput-2\") title \"Comparator2 Inverted-Output\"\n.endc"
 		(exclude_from_sim no)
 		(at 170.688 147.066 0)
 		(effects
@@ -7342,7 +7342,7 @@
 			)
 		)
 		(property "Value" "1N4148"
-			(at 242.57 56.642 0)
+			(at 242.57 55.118 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7887,7 +7887,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:VSIN")
-		(at 93.98 144.78 90)
+		(at 93.98 144.78 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7896,7 +7896,7 @@
 		(dnp yes)
 		(uuid "9383376a-fea8-4976-ae27-c38ebab1ccb3")
 		(property "Reference" "V5"
-			(at 97.79 152.146 90)
+			(at 90.17 137.414 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7905,7 +7905,7 @@
 			)
 		)
 		(property "Value" "VSIN"
-			(at 97.79 149.606 90)
+			(at 90.17 139.954 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7950,7 +7950,7 @@
 			)
 		)
 		(property "Sim.Params" "dc=0 ampl=12 f=3 td=0 theta=0 phase=0 ac=1"
-			(at 150.114 147.828 90)
+			(at 37.846 141.732 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10094,7 +10094,7 @@
 			)
 		)
 		(property "Value" "1N4148"
-			(at 236.22 31.242 0)
+			(at 236.22 29.972 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11104,7 +11104,7 @@
 				(justify left top)
 			)
 		)
-		(pin "+v" output
+		(pin "+12v" output
 			(at 41.91 165.1 0)
 			(uuid "d37c7059-3184-4d4e-8c98-fd2c8b1ac01e")
 			(effects
@@ -11114,7 +11114,7 @@
 				(justify right)
 			)
 		)
-		(pin "-v" output
+		(pin "-12v" output
 			(at 41.91 171.45 0)
 			(uuid "2361364f-a208-4b5f-afa6-bb2f0cf35dad")
 			(effects
