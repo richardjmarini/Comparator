@@ -3371,7 +3371,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "Rtot=10k w=0.9"
+		(property "Sim.Params" "Rtot=10k w=0.3"
 			(at 67.31 66.04 0)
 			(effects
 				(font
