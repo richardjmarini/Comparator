@@ -1,0 +1,277 @@
+* ============================================================
+*  Littelfuse PolySwitch 72R Series PPTC Model
+*  NGSpice Behavioral Model
+*  Datasheet: Rev VL 07/30/25
+*
+*  Model topology:
+*    - Thermal node (V_temp) driven by self-heating: P = I^2 * R(T)
+*    - Thermal RC: C_th (thermal mass) + R_th (thermal resistance to ambient)
+*    - Resistance R(T): low below Curie point (~130 C), high above
+*    - PPTC trip modeled as exponential R(T) characteristic
+*
+*  Subcircuit ports:
+*    A  K  TAMB
+*    A   = anode  (current enters here)
+*    K   = cathode
+*    TAMB= ambient temperature node (connect to GND for 20 degC ambient,
+*          or drive with a voltage = delta_T above 20 degC)
+*
+*  Usage example:
+*    .include "72R_PPTC.lib"
+*    XFUSE A K TAMB 72R090X
+*    VTAMB TAMB 0 DC 0    ; 20 degC ambient
+*
+*  Temperature derating:
+*    The TAMB node accepts a DC voltage where 1V = 1 degC ABOVE 20 degC.
+*    Example: 40 degC ambient -> VTAMB TAMB 0 DC 20
+*    Example: -20 degC ambient -> VTAMB TAMB 0 DC -40
+*
+*  Parameters (from datasheet electrical characteristics):
+*    I_HOLD = hold current at 20 degC (A)
+*    I_TRIP = trip current at 20 degC (A)  [= 2 * I_HOLD]
+*    R_MIN  = minimum cold resistance (Ohm)
+*    R_1MAX = max resistance 1hr after trip (Ohm)
+*    PD_TYP = typical tripped-state dissipation (W)
+*    V_MAX  = 72 Vdc (all variants)
+*    I_MAX  = 40 A  (all variants)
+*
+*  Thermal model parameters:
+*    T_CURIE = ~130 degC  (PPTC crystal transition temperature)
+*    R_TH    = thermal resistance to ambient (degC/W), estimated from
+*              Pd_typ: T_surface_max=125C, T_amb=20C, so R_th ~ 105/Pd_typ
+*    C_TH    = thermal capacitance (J/degC), estimated to reproduce
+*              the datasheet time-to-trip at the specified test current.
+*              Formula: C_th ~ I_trip^2 * R_cold * t_trip / (T_curie - T_amb)
+*
+*  Resistance model:
+*    R_cold (T < T_curie) = R_min * exp(alpha * (T - 20))
+*    R_hot  (T > T_curie) = R_1max * exp(beta  * (T - T_curie))
+*    Blended with a smooth sigmoid: R(T) = R_cold + (R_hot-R_cold)*sig(T-T_curie)
+*    sig(x) = 1/(1+exp(-k*x)), k=0.5 for a ~4 degC transition band
+*
+*  NOTE: This is a simplified single-pole thermal model.
+*        Multi-pulse and repetitive fault behavior may not be accurate.
+*        Always verify in your application per datasheet warning.
+* ============================================================
+
+* ------------------------------------------------------------
+*  72R020X  Ihold=0.20A  Itrip=0.40A  Rmin=1.830 R1max=4.400 Pd=0.41W
+* ------------------------------------------------------------
+.subckt 72R020X A K TAMB
+.param Ihold=0.20 Rmin=1.830 R1max=4.400 Pdtyp=0.41
+.param Tcurie=130 Tamb_ref=20
+.param Rth={105/Pdtyp}
+.param Cth={4*Ihold*Ihold*Rmin*5/(Tcurie-Tamb_ref)}
+.param alpha=0.02  beta=0.10  ksig=0.5
+* Thermal node: Vtemp = temperature rise above Tamb_ref (in degC)
+* Self-heating current source: P = V(A,K)^2 / R = I^2*R, injected into Cth node
+* We use a B-source to compute instantaneous power
+* Thermal node 'Tj' holds junction temperature
+Cth_node Tj 0 {Cth} IC=0
+Rth_node Tj TAMB {Rth}
+* Power injection: I_heat = V(A,K)*I(Vsense) [power in watts]
+* We use a voltage-controlled current source measuring current through the device
+Vsense Aint A DC 0
+Bheat 0 Tj I = V(Aint,K)*I(Vsense)
+* Temperature: Tdev = Tj + TAMB + Tamb_ref  (degC)
+* Resistance: R(Tdev) using smooth sigmoid blend
+* Expressed as voltage-controlled resistor via B-source
+* R_eff = Rmin*exp(alpha*(Tdev-20)) + (R1max*exp(beta*(Tdev-Tcurie))-Rmin*exp(alpha*(Tdev-20))) / (1+exp(-ksig*(Tdev-Tcurie)))
+Bres Aint K V = V(Aint,K) - I(Vsense)*( {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref})) + ({R1max}*exp({beta}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie})) - {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref}))) / (1+exp(-{ksig}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie}))) )
+.ends 72R020X
+
+* ------------------------------------------------------------
+*  72R030X  Ihold=0.30A  Itrip=0.60A  Rmin=0.880 R1max=2.100 Pd=0.49W
+* ------------------------------------------------------------
+.subckt 72R030X A K TAMB
+.param Ihold=0.30 Rmin=0.880 R1max=2.100 Pdtyp=0.49
+.param Tcurie=130 Tamb_ref=20
+.param Rth={105/Pdtyp}
+.param Cth={4*Ihold*Ihold*Rmin*4/(Tcurie-Tamb_ref)}
+.param alpha=0.02  beta=0.10  ksig=0.5
+Cth_node Tj 0 {Cth} IC=0
+Rth_node Tj TAMB {Rth}
+Vsense Aint A DC 0
+Bheat 0 Tj I = V(Aint,K)*I(Vsense)
+Bres Aint K V = V(Aint,K) - I(Vsense)*( {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref})) + ({R1max}*exp({beta}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie})) - {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref}))) / (1+exp(-{ksig}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie}))) )
+.ends 72R030X
+
+* ------------------------------------------------------------
+*  72R040X  Ihold=0.40A  Itrip=0.80A  Rmin=0.550 R1max=1.290 Pd=0.56W
+* ------------------------------------------------------------
+.subckt 72R040X A K TAMB
+.param Ihold=0.40 Rmin=0.550 R1max=1.290 Pdtyp=0.56
+.param Tcurie=130 Tamb_ref=20
+.param Rth={105/Pdtyp}
+.param Cth={4*Ihold*Ihold*Rmin*4/(Tcurie-Tamb_ref)}
+.param alpha=0.02  beta=0.10  ksig=0.5
+Cth_node Tj 0 {Cth} IC=0
+Rth_node Tj TAMB {Rth}
+Vsense Aint A DC 0
+Bheat 0 Tj I = V(Aint,K)*I(Vsense)
+Bres Aint K V = V(Aint,K) - I(Vsense)*( {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref})) + ({R1max}*exp({beta}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie})) - {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref}))) / (1+exp(-{ksig}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie}))) )
+.ends 72R040X
+
+* ------------------------------------------------------------
+*  72R050X  Ihold=0.50A  Itrip=1.00A  Rmin=0.500 R1max=1.170 Pd=0.77W
+* ------------------------------------------------------------
+.subckt 72R050X A K TAMB
+.param Ihold=0.50 Rmin=0.500 R1max=1.170 Pdtyp=0.77
+.param Tcurie=130 Tamb_ref=20
+.param Rth={105/Pdtyp}
+.param Cth={4*Ihold*Ihold*Rmin*4/(Tcurie-Tamb_ref)}
+.param alpha=0.02  beta=0.10  ksig=0.5
+Cth_node Tj 0 {Cth} IC=0
+Rth_node Tj TAMB {Rth}
+Vsense Aint A DC 0
+Bheat 0 Tj I = V(Aint,K)*I(Vsense)
+Bres Aint K V = V(Aint,K) - I(Vsense)*( {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref})) + ({R1max}*exp({beta}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie})) - {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref}))) / (1+exp(-{ksig}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie}))) )
+.ends 72R050X
+
+* ------------------------------------------------------------
+*  72R065X  Ihold=0.65A  Itrip=1.30A  Rmin=0.310 R1max=0.720 Pd=0.88W
+* ------------------------------------------------------------
+.subckt 72R065X A K TAMB
+.param Ihold=0.65 Rmin=0.310 R1max=0.720 Pdtyp=0.88
+.param Tcurie=130 Tamb_ref=20
+.param Rth={105/Pdtyp}
+.param Cth={4*Ihold*Ihold*Rmin*5/(Tcurie-Tamb_ref)}
+.param alpha=0.02  beta=0.10  ksig=0.5
+Cth_node Tj 0 {Cth} IC=0
+Rth_node Tj TAMB {Rth}
+Vsense Aint A DC 0
+Bheat 0 Tj I = V(Aint,K)*I(Vsense)
+Bres Aint K V = V(Aint,K) - I(Vsense)*( {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref})) + ({R1max}*exp({beta}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie})) - {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref}))) / (1+exp(-{ksig}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie}))) )
+.ends 72R065X
+
+* ------------------------------------------------------------
+*  72R075X  Ihold=0.75A  Itrip=1.50A  Rmin=0.250 R1max=0.600 Pd=0.92W
+* ------------------------------------------------------------
+.subckt 72R075X A K TAMB
+.param Ihold=0.75 Rmin=0.250 R1max=0.600 Pdtyp=0.92
+.param Tcurie=130 Tamb_ref=20
+.param Rth={105/Pdtyp}
+.param Cth={4*Ihold*Ihold*Rmin*6/(Tcurie-Tamb_ref)}
+.param alpha=0.02  beta=0.10  ksig=0.5
+Cth_node Tj 0 {Cth} IC=0
+Rth_node Tj TAMB {Rth}
+Vsense Aint A DC 0
+Bheat 0 Tj I = V(Aint,K)*I(Vsense)
+Bres Aint K V = V(Aint,K) - I(Vsense)*( {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref})) + ({R1max}*exp({beta}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie})) - {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref}))) / (1+exp(-{ksig}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie}))) )
+.ends 72R075X
+
+* ------------------------------------------------------------
+*  72R090X  Ihold=0.90A  Itrip=1.80A  Rmin=0.200 R1max=0.470 Pd=0.99W
+* ------------------------------------------------------------
+.subckt 72R090X A K TAMB
+.param Ihold=0.90 Rmin=0.200 R1max=0.470 Pdtyp=0.99
+.param Tcurie=130 Tamb_ref=20
+.param Rth={105/Pdtyp}
+.param Cth={4*Ihold*Ihold*Rmin*7/(Tcurie-Tamb_ref)}
+.param alpha=0.02  beta=0.10  ksig=0.5
+Cth_node Tj 0 {Cth} IC=0
+Rth_node Tj TAMB {Rth}
+Vsense Aint A DC 0
+Bheat 0 Tj I = V(Aint,K)*I(Vsense)
+Bres Aint K V = V(Aint,K) - I(Vsense)*( {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref})) + ({R1max}*exp({beta}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie})) - {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref}))) / (1+exp(-{ksig}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie}))) )
+.ends 72R090X
+
+* ------------------------------------------------------------
+*  72R110X  Ihold=1.10A  Itrip=2.20A  Rmin=0.150 R1max=0.380 Pd=1.50W
+* ------------------------------------------------------------
+.subckt 72R110X A K TAMB
+.param Ihold=1.10 Rmin=0.150 R1max=0.380 Pdtyp=1.50
+.param Tcurie=130 Tamb_ref=20
+.param Rth={105/Pdtyp}
+.param Cth={4*Ihold*Ihold*Rmin*8/(Tcurie-Tamb_ref)}
+.param alpha=0.02  beta=0.10  ksig=0.5
+Cth_node Tj 0 {Cth} IC=0
+Rth_node Tj TAMB {Rth}
+Vsense Aint A DC 0
+Bheat 0 Tj I = V(Aint,K)*I(Vsense)
+Bres Aint K V = V(Aint,K) - I(Vsense)*( {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref})) + ({R1max}*exp({beta}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie})) - {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref}))) / (1+exp(-{ksig}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie}))) )
+.ends 72R110X
+
+* ------------------------------------------------------------
+*  72R135X  Ihold=1.35A  Itrip=2.70A  Rmin=0.120 R1max=0.300 Pd=1.70W
+* ------------------------------------------------------------
+.subckt 72R135X A K TAMB
+.param Ihold=1.35 Rmin=0.120 R1max=0.300 Pdtyp=1.70
+.param Tcurie=130 Tamb_ref=20
+.param Rth={105/Pdtyp}
+.param Cth={4*Ihold*Ihold*Rmin*10/(Tcurie-Tamb_ref)}
+.param alpha=0.02  beta=0.10  ksig=0.5
+Cth_node Tj 0 {Cth} IC=0
+Rth_node Tj TAMB {Rth}
+Vsense Aint A DC 0
+Bheat 0 Tj I = V(Aint,K)*I(Vsense)
+Bres Aint K V = V(Aint,K) - I(Vsense)*( {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref})) + ({R1max}*exp({beta}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie})) - {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref}))) / (1+exp(-{ksig}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie}))) )
+.ends 72R135X
+
+* ------------------------------------------------------------
+*  72R160X  Ihold=1.60A  Itrip=3.20A  Rmin=0.090 R1max=0.220 Pd=1.90W
+* ------------------------------------------------------------
+.subckt 72R160X A K TAMB
+.param Ihold=1.60 Rmin=0.090 R1max=0.220 Pdtyp=1.90
+.param Tcurie=130 Tamb_ref=20
+.param Rth={105/Pdtyp}
+.param Cth={4*Ihold*Ihold*Rmin*11/(Tcurie-Tamb_ref)}
+.param alpha=0.02  beta=0.10  ksig=0.5
+Cth_node Tj 0 {Cth} IC=0
+Rth_node Tj TAMB {Rth}
+Vsense Aint A DC 0
+Bheat 0 Tj I = V(Aint,K)*I(Vsense)
+Bres Aint K V = V(Aint,K) - I(Vsense)*( {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref})) + ({R1max}*exp({beta}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie})) - {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref}))) / (1+exp(-{ksig}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie}))) )
+.ends 72R160X
+
+* ------------------------------------------------------------
+*  72R185X  Ihold=1.85A  Itrip=3.70A  Rmin=0.080 R1max=0.190 Pd=2.10W
+* ------------------------------------------------------------
+.subckt 72R185X A K TAMB
+.param Ihold=1.85 Rmin=0.080 R1max=0.190 Pdtyp=2.10
+.param Tcurie=130 Tamb_ref=20
+.param Rth={105/Pdtyp}
+.param Cth={4*Ihold*Ihold*Rmin*13/(Tcurie-Tamb_ref)}
+.param alpha=0.02  beta=0.10  ksig=0.5
+Cth_node Tj 0 {Cth} IC=0
+Rth_node Tj TAMB {Rth}
+Vsense Aint A DC 0
+Bheat 0 Tj I = V(Aint,K)*I(Vsense)
+Bres Aint K V = V(Aint,K) - I(Vsense)*( {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref})) + ({R1max}*exp({beta}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie})) - {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref}))) / (1+exp(-{ksig}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie}))) )
+.ends 72R185X
+
+* ------------------------------------------------------------
+*  72R250X  Ihold=2.50A  Itrip=5.00A  Rmin=0.050 R1max=0.130 Pd=2.50W
+* ------------------------------------------------------------
+.subckt 72R250X A K TAMB
+.param Ihold=2.50 Rmin=0.050 R1max=0.130 Pdtyp=2.50
+.param Tcurie=130 Tamb_ref=20
+.param Rth={105/Pdtyp}
+.param Cth={4*Ihold*Ihold*Rmin*16/(Tcurie-Tamb_ref)}
+.param alpha=0.02  beta=0.10  ksig=0.5
+Cth_node Tj 0 {Cth} IC=0
+Rth_node Tj TAMB {Rth}
+Vsense Aint A DC 0
+Bheat 0 Tj I = V(Aint,K)*I(Vsense)
+Bres Aint K V = V(Aint,K) - I(Vsense)*( {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref})) + ({R1max}*exp({beta}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie})) - {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref}))) / (1+exp(-{ksig}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie}))) )
+.ends 72R250X
+
+* ------------------------------------------------------------
+*  72R375X  Ihold=3.75A  Itrip=7.50A  Rmin=0.030 R1max=0.080 Pd=3.20W
+* ------------------------------------------------------------
+.subckt 72R375X A K TAMB
+.param Ihold=3.75 Rmin=0.030 R1max=0.080 Pdtyp=3.20
+.param Tcurie=130 Tamb_ref=20
+.param Rth={105/Pdtyp}
+.param Cth={4*Ihold*Ihold*Rmin*24/(Tcurie-Tamb_ref)}
+.param alpha=0.02  beta=0.10  ksig=0.5
+Cth_node Tj 0 {Cth} IC=0
+Rth_node Tj TAMB {Rth}
+Vsense Aint A DC 0
+Bheat 0 Tj I = V(Aint,K)*I(Vsense)
+Bres Aint K V = V(Aint,K) - I(Vsense)*( {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref})) + ({R1max}*exp({beta}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie})) - {Rmin}*exp({alpha}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tamb_ref}))) / (1+exp(-{ksig}*(V(Tj)+V(TAMB)+{Tamb_ref}-{Tcurie}))) )
+.ends 72R375X
+
+* ============================================================
+*  END OF 72R_PPTC.lib
+* ============================================================

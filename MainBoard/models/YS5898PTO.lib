@@ -1,0 +1,10 @@
+.SUBCKT YS5898PTO P N
+.PARAM T = 60
+.PARAM R0=25 T0=25 Tref=110 R_min=18 B_ntc=-500 alpha=0.35 k_blend=0.5
+BPTC P N I = (V(P,N)) / (
++  ( {R0} * exp( {B_ntc} * (1/(T+273.15) - 1/(T0+273.15)) )
++    * (1 - 1/(1+exp(-{k_blend}*(T-{Tref})))) )
++  + ( {R_min} * exp( {alpha} * (T - {Tref}) )
++    * (1/(1+exp(-{k_blend}*(T-{Tref})))) )
++ )
+.ENDS YS5898PTO

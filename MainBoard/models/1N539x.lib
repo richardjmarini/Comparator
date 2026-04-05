@@ -1,0 +1,149 @@
+* ============================================================
+* NGSpice Diode Models: 1N5391 through 1N5399
+* Silicon Rectifier, DO-15 package
+* Manufacturer: Rectron Semiconductor
+* Datasheet: rect-s-a0008872854-1 (Rev A, 2019-08)
+* ============================================================
+*
+* Parameter Derivation Notes:
+* ----------------------------
+* IS  (saturation current):
+*   From IR = 5.0 uA at VR = VRRM, TA = 25°C.
+*   Using I = IS*(exp(V/VT)-1) in reverse: IS ~ IR = 5e-6 A
+*   (conservative; real IS is lower, but IR includes generation
+*    current in the depletion region for a rectifier die)
+*
+* N   (emission coefficient):
+*   From VF = 1.1 V at IF = 1.5 A, TA = 25°C.
+*   VF = N*VT*ln(IF/IS + 1)
+*   VT = 0.02585 V at 25°C
+*   => N = VF / (VT * ln(IF/IS)) = 1.1 / (0.02585 * ln(1.5/5e-6))
+*        = 1.1 / (0.02585 * 12.51) = 1.1 / 0.3234 ~ 3.40
+*   Note: N > 2 is typical for large-geometry rectifier diodes
+*   where recombination current dominates at low/mid forward bias.
+*
+* RS  (series resistance):
+*   Estimated from the forward I-V curve (Fig. 2). At 1.5 A the
+*   ideal diode equation already accounts for ~0.9 V; the
+*   remaining ~0.2 V is resistive drop: RS ~ 0.2/1.5 = 0.13 Ohm
+*
+* IKF (high-injection knee current):
+*   Set to IFSM = 50 A (peak surge). Above IKF the diode
+*   transitions out of its normal exponential region.
+*
+* CJO (zero-bias junction capacitance):
+*   CJ = 20 pF (datasheet typical at 4 V reverse, 1 MHz).
+*   Zero-bias value estimated ~35 pF (CJO = CJ*(1+VR/VJ)^M).
+*
+* VJ  (built-in potential): 0.6 V (typical silicon PN junction)
+* M   (grading coefficient): 0.333 (abrupt junction for rectifier)
+*
+* TT  (transit time):
+*   Not specified. Estimated from I²t = 10.37 A²s and IFSM = 50 A:
+*   t_surge ~ 2*I2t/IFSM² = 2*10.37/2500 = 8.3 ms (matches datasheet
+*   8.3 ms half sine). This is a power/surge parameter, not directly
+*   TT. For a 1.5 A rectifier at 60 Hz, TT ~ 5 us is typical.
+*
+* EG  (activation energy):
+*   IR doubles roughly every 10°C for silicon. From IR(25°C)=5uA
+*   to IR(150°C)=5mA is a factor of 1000 over 125°C.
+*   Using IS(T) ~ T^3 * exp(-EG/kT): EG = 1.11 eV (silicon default)
+*
+* BV  (breakdown voltage): set per part number (see table below)
+* IBV (current at breakdown): 1 mA (conservative datasheet reading)
+*
+* XTI (IS temperature exponent): 3.0 (standard for PN junction)
+*
+* ============================================================
+*
+* PART NUMBER TO VOLTAGE MAPPING:
+*   1N5391  VRRM=50V    VBR=55V
+*   1N5392  VRRM=100V   VBR=110V
+*   1N5393  VRRM=200V   VBR=220V
+*   1N5394  VRRM=300V   VBR=330V
+*   1N5395  VRRM=400V   VBR=440V
+*   1N5396  VRRM=500V   VBR=550V
+*   1N5397  VRRM=600V   VBR=660V
+*   1N5398  VRRM=800V   VBR=880V
+*   1N5399  VRRM=1000V  VBR=1100V
+*
+* BV is set ~10% above VRRM (avalanche breakdown is above the
+* rated DC blocking voltage by a safety margin).
+*
+* ============================================================
+* USAGE EXAMPLE:
+*   .include "1N539x.lib"
+*   D1 ANODE CATHODE 1N5395   ; 400V rectifier
+*
+* ============================================================
+
+* --- Shared electrical parameters (all variants) ---
+* IS=5e-6  N=3.4  RS=0.13  IKF=50  CJO=35p  VJ=0.6
+* M=0.333  TT=5u  EG=1.11  XTI=3  IBV=1m
+
+.model 1N5391 D (
++ IS=5e-6   N=3.4    RS=0.13  IKF=50
++ CJO=35p   VJ=0.6   M=0.333  TT=5u
++ BV=55     IBV=1m   EG=1.11  XTI=3
++ TNOM=25
++ )
+
+.model 1N5392 D (
++ IS=5e-6   N=3.4    RS=0.13  IKF=50
++ CJO=35p   VJ=0.6   M=0.333  TT=5u
++ BV=110    IBV=1m   EG=1.11  XTI=3
++ TNOM=25
++ )
+
+.model 1N5393 D (
++ IS=5e-6   N=3.4    RS=0.13  IKF=50
++ CJO=35p   VJ=0.6   M=0.333  TT=5u
++ BV=220    IBV=1m   EG=1.11  XTI=3
++ TNOM=25
++ )
+
+.model 1N5394 D (
++ IS=5e-6   N=3.4    RS=0.13  IKF=50
++ CJO=35p   VJ=0.6   M=0.333  TT=5u
++ BV=330    IBV=1m   EG=1.11  XTI=3
++ TNOM=25
++ )
+
+.model 1N5395 D (
++ IS=5e-6   N=3.4    RS=0.13  IKF=50
++ CJO=35p   VJ=0.6   M=0.333  TT=5u
++ BV=440    IBV=1m   EG=1.11  XTI=3
++ TNOM=25
++ )
+
+.model 1N5396 D (
++ IS=5e-6   N=3.4    RS=0.13  IKF=50
++ CJO=35p   VJ=0.6   M=0.333  TT=5u
++ BV=550    IBV=1m   EG=1.11  XTI=3
++ TNOM=25
++ )
+
+.model 1N5397 D (
++ IS=5e-6   N=3.4    RS=0.13  IKF=50
++ CJO=35p   VJ=0.6   M=0.333  TT=5u
++ BV=660    IBV=1m   EG=1.11  XTI=3
++ TNOM=25
++ )
+
+.model 1N5398 D (
++ IS=5e-6   N=3.4    RS=0.13  IKF=50
++ CJO=35p   VJ=0.6   M=0.333  TT=5u
++ BV=880    IBV=1m   EG=1.11  XTI=3
++ TNOM=25
++ )
+
+.model 1N5399 D (
++ IS=5e-6   N=3.4    RS=0.13  IKF=50
++ CJO=35p   VJ=0.6   M=0.333  TT=5u
++ BV=1100   IBV=1m   EG=1.11  XTI=3
++ TNOM=25
++ )
+
+* ============================================================
+* END OF MODEL FILE
+* ============================================================
