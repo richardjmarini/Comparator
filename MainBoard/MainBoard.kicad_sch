@@ -2079,9 +2079,9 @@
 		)
 		(uuid "4a86bc94-057a-4c24-9a3d-1ada699093ff")
 	)
-	(text ".options method=gear gmin=1e-9 cshunt=1e-12 \n.options reltol=1e-2 abstol=1e-9 vntol=1e-6 \n.options itl1=300 itl4=300 \n.options maxstep=100u temp=60\n.ic V(Net-_D35-K_)=12 V(Net-_D36-A_)=-12 V(/+v)=12 v(/-v)=-12 V(/Comparator-1/InternalBias)=10.8 V(/Comparator-2/InternalBias)=10.8\n.tran 10ms 1s uic\n.control\nrun\nplot V(\"/root/Comparator-1/NonInvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") \n     + V(\"/Output-1\")\n     + V(\"/+v\") V(\"/-v\")\n     + title \"Comparator1 Output\" \n    \nplot V(\"/root/Comparator-1/NonInvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\")\n     + V(\"/InvertedOutput-1\") title \"Comparator1 Inverted-Output\"\nplot V(\"/root/Comparator-2/InvertingInput\") \n     + V(\"/root/Comparator-2/NonInvertingInput\")   \n     + V(\"/Output-2\") title \"Comparator2 Output\" \nplot V(\"/root/Comparator-2/InvertingInput\")\n     + V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/InvertedOutput-2\") title \"Comparator2 Inverted-Output\"\n.endc"
+	(text ".options method=gear gmin=1e-9 cshunt=1e-12 \n.options reltol=1e-2 abstol=1e-9 vntol=1e-6 \n.options itl1=300 itl4=300 \n.options maxstep=100u temp=60\n.ic V(Net-_D35-K_)=12 V(Net-_D36-A_)=-12 \n.ic V(/+v)=12 v(/-v)=-12 \n.ic V(/Comparator-1/InternalBias)=12 V(/Comparator-2/InternalBias)=12\n.tran 10ms 1s uic\n.control\nrun\nplot V(\"/root/Comparator-1/NonInvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") \n     + V(\"/Output-1\")\n     + V(\"/+v\") V(\"/-v\")\n     + title \"Comparator1 Output\" \n    \nplot V(\"/root/Comparator-1/NonInvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\")\n     + V(\"/InvertedOutput-1\") title \"Comparator1 Inverted-Output\"\nplot V(\"/root/Comparator-2/InvertingInput\") \n     + V(\"/root/Comparator-2/NonInvertingInput\")   \n     + V(\"/Output-2\") title \"Comparator2 Output\" \nplot V(\"/root/Comparator-2/InvertingInput\")\n     + V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/InvertedOutput-2\") title \"Comparator2 Inverted-Output\"\n.endc"
 		(exclude_from_sim no)
-		(at 170.688 147.066 0)
+		(at 105.664 168.91 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2930,7 +2930,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 144.78) (xy 86.36 148.59)
+			(xy 21.59 168.91) (xy 21.59 172.72)
 		)
 		(stroke
 			(width 0)
@@ -2950,7 +2950,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 130.81) (xy 102.87 130.81)
+			(xy 34.29 154.94) (xy 38.1 154.94)
 		)
 		(stroke
 			(width 0)
@@ -2990,7 +2990,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 165.1) (xy 50.8 165.1)
+			(xy 155.575 109.855) (xy 164.465 109.855)
 		)
 		(stroke
 			(width 0)
@@ -3200,7 +3200,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 171.45) (xy 50.8 171.45)
+			(xy 155.575 116.205) (xy 164.465 116.205)
 		)
 		(stroke
 			(width 0)
@@ -3340,7 +3340,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 144.78) (xy 102.87 144.78)
+			(xy 34.29 168.91) (xy 38.1 168.91)
 		)
 		(stroke
 			(width 0)
@@ -3400,7 +3400,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 144.78) (xy 86.36 144.78)
+			(xy 24.13 168.91) (xy 21.59 168.91)
 		)
 		(stroke
 			(width 0)
@@ -3440,7 +3440,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 130.81) (xy 86.36 134.62)
+			(xy 21.59 154.94) (xy 21.59 158.75)
 		)
 		(stroke
 			(width 0)
@@ -3470,7 +3470,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 130.81) (xy 88.9 130.81)
+			(xy 21.59 154.94) (xy 24.13 154.94)
 		)
 		(stroke
 			(width 0)
@@ -3820,7 +3820,7 @@
 		)
 	)
 	(label "+v"
-		(at 50.8 165.1 0)
+		(at 164.465 109.855 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3830,7 +3830,7 @@
 		(uuid "34ba975e-69e9-4649-8524-83bd1b9bf3ca")
 	)
 	(label "{slash}Comparator-1{slash}NonInvertingInput"
-		(at 102.87 130.81 0)
+		(at 38.1 154.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3970,7 +3970,7 @@
 		(uuid "68496cda-88e6-4d75-a96d-611eebe42d39")
 	)
 	(label "-v"
-		(at 50.8 171.45 0)
+		(at 164.465 116.205 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4080,7 +4080,7 @@
 		(uuid "968d8daa-1886-44f4-8ab9-880e78da17e0")
 	)
 	(label "{slash}Comparator-1{slash}InvertingInput"
-		(at 102.87 144.78 0)
+		(at 38.1 168.91 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4644,7 +4644,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 86.36 148.59 0)
+		(at 21.59 172.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4652,7 +4652,7 @@
 		(dnp yes)
 		(uuid "0e297457-2a39-418b-9478-34c39036c997")
 		(property "Reference" "#PWR07"
-			(at 86.36 154.94 0)
+			(at 21.59 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4661,7 +4661,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 84.582 153.416 0)
+			(at 19.812 177.546 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4670,7 +4670,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 148.59 0)
+			(at 21.59 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4679,7 +4679,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 148.59 0)
+			(at 21.59 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4688,7 +4688,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 86.36 148.59 0)
+			(at 21.59 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4929,7 +4929,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:VPULSE")
-		(at 93.98 130.81 270)
+		(at 29.21 154.94 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4938,7 +4938,7 @@
 		(dnp yes)
 		(uuid "12fd626d-ddeb-4c2a-a234-395b460fab07")
 		(property "Reference" "V1"
-			(at 95.758 138.684 90)
+			(at 30.988 162.814 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4947,7 +4947,7 @@
 			)
 		)
 		(property "Value" "VPULSE"
-			(at 90.932 135.636 90)
+			(at 26.162 159.766 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4956,7 +4956,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 93.98 130.81 0)
+			(at 29.21 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4965,7 +4965,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
-			(at 93.98 130.81 0)
+			(at 29.21 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4974,7 +4974,7 @@
 			)
 		)
 		(property "Description" "Voltage source, pulse"
-			(at 93.98 130.81 0)
+			(at 29.21 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4983,7 +4983,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 93.98 130.81 0)
+			(at 29.21 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4992,7 +4992,7 @@
 			)
 		)
 		(property "Sim.Type" "PULSE"
-			(at 93.98 130.81 0)
+			(at 29.21 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5001,7 +5001,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 93.98 130.81 0)
+			(at 29.21 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5011,7 +5011,7 @@
 			)
 		)
 		(property "Sim.Params" "y1=-5 y2=5 td=100ms tr=100ms tf=100ms tw=600ms np=1"
-			(at 165.354 134.112 90)
+			(at 100.584 158.242 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5707,15 +5707,15 @@
 		(dnp no)
 		(uuid "41b87e01-013a-4dad-b109-173ab0c58d8b")
 		(property "Reference" "R13"
-			(at 250.19 115.824 90)
+			(at 248.666 115.824 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "1k"
-			(at 251.46 110.998 90)
+		(property "Value" "100"
+			(at 248.666 118.364 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6560,7 +6560,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 86.36 134.62 0)
+		(at 21.59 158.75 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6569,7 +6569,7 @@
 		(dnp yes)
 		(uuid "6811c01c-95bc-4d4d-91d4-52a4080b6aea")
 		(property "Reference" "#PWR02"
-			(at 86.36 140.97 0)
+			(at 21.59 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6578,7 +6578,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 88.138 139.7 0)
+			(at 23.368 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6587,7 +6587,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 134.62 0)
+			(at 21.59 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6596,7 +6596,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 134.62 0)
+			(at 21.59 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6605,7 +6605,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 86.36 134.62 0)
+			(at 21.59 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7729,7 +7729,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "100"
 			(at 242.824 94.742 90)
 			(effects
 				(font
@@ -7887,7 +7887,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:VSIN")
-		(at 93.98 144.78 270)
+		(at 29.21 168.91 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7896,7 +7896,7 @@
 		(dnp yes)
 		(uuid "9383376a-fea8-4976-ae27-c38ebab1ccb3")
 		(property "Reference" "V5"
-			(at 90.17 137.414 90)
+			(at 25.4 161.544 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7905,7 +7905,7 @@
 			)
 		)
 		(property "Value" "VSIN"
-			(at 90.17 139.954 90)
+			(at 25.4 164.084 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7914,7 +7914,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 93.98 144.78 0)
+			(at 29.21 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7923,7 +7923,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
-			(at 93.98 144.78 0)
+			(at 29.21 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7932,7 +7932,7 @@
 			)
 		)
 		(property "Description" "Voltage source, sinusoidal"
-			(at 93.98 144.78 0)
+			(at 29.21 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7941,7 +7941,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 93.98 144.78 0)
+			(at 29.21 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7950,7 +7950,7 @@
 			)
 		)
 		(property "Sim.Params" "dc=0 ampl=10 f=3 td=0 theta=0 phase=0 ac=1"
-			(at 37.846 141.732 90)
+			(at 39.116 172.212 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7959,7 +7959,7 @@
 			)
 		)
 		(property "Sim.Type" "SIN"
-			(at 93.98 144.78 0)
+			(at 29.21 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7968,7 +7968,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 93.98 144.78 0)
+			(at 29.21 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9688,15 +9688,15 @@
 		(dnp no)
 		(uuid "d3b88564-e1d9-4f65-aa8a-2abea8bbfe10")
 		(property "Reference" "R12"
-			(at 250.19 56.388 90)
+			(at 247.904 56.388 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "1k"
-			(at 250.19 58.928 90)
+		(property "Value" "100"
+			(at 247.904 58.928 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10626,7 +10626,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "100"
 			(at 242.824 35.052 90)
 			(effects
 				(font
@@ -11071,7 +11071,7 @@
 		)
 	)
 	(sheet
-		(at 22.225 160.655)
+		(at 135.89 105.41)
 		(size 19.685 15.24)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11087,7 +11087,7 @@
 		)
 		(uuid "a32d4096-98d0-4ae1-9e53-91c41f554141")
 		(property "Sheetname" "PowerSupply"
-			(at 22.225 159.9434 0)
+			(at 135.89 104.6984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11096,7 +11096,7 @@
 			)
 		)
 		(property "Sheetfile" "power_supply.kicad_sch"
-			(at 22.225 176.4796 0)
+			(at 135.89 121.2346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11105,7 +11105,7 @@
 			)
 		)
 		(pin "+12v" output
-			(at 41.91 165.1 0)
+			(at 155.575 109.855 0)
 			(uuid "d37c7059-3184-4d4e-8c98-fd2c8b1ac01e")
 			(effects
 				(font
@@ -11115,7 +11115,7 @@
 			)
 		)
 		(pin "-12v" output
-			(at 41.91 171.45 0)
+			(at 155.575 116.205 0)
 			(uuid "2361364f-a208-4b5f-afa6-bb2f0cf35dad")
 			(effects
 				(font
