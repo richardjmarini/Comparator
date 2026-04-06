@@ -2079,9 +2079,9 @@
 		)
 		(uuid "4a86bc94-057a-4c24-9a3d-1ada699093ff")
 	)
-	(text ".options method=gear gmin=1e-9 cshunt=1e-12 \n.options reltol=1e-2 abstol=1e-9 vntol=1e-6 \n.options itl1=300 itl4=300 \n.options maxstep=100u temp=60\n.ic V(Net-_D35-K_)=12 V(Net-_D36-A_)=-12 \n.ic V(/+v)=12 v(/-v)=-12 \n.ic V(/Comparator-1/InternalBias)=12 V(/Comparator-2/InternalBias)=12\n.tran 10ms 1s uic\n.control\nrun\nplot V(\"/root/Comparator-1/NonInvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") \n     + V(\"/Output-1\")\n     + V(\"/+v\") V(\"/-v\")\n     + title \"Comparator1 Output\" \n    \nplot V(\"/root/Comparator-1/NonInvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\")\n     + V(\"/InvertedOutput-1\") title \"Comparator1 Inverted-Output\"\nplot V(\"/root/Comparator-2/InvertingInput\") \n     + V(\"/root/Comparator-2/NonInvertingInput\")   \n     + V(\"/Output-2\") title \"Comparator2 Output\" \nplot V(\"/root/Comparator-2/InvertingInput\")\n     + V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/InvertedOutput-2\") title \"Comparator2 Inverted-Output\"\n.endc"
+	(text ".options method=gear gmin=1e-9 cshunt=1e-12 \n.options reltol=1e-2 abstol=1e-9 vntol=1e-6 \n.options itl1=300 itl4=300 \n.options maxstep=100u temp=60\n.ic V(Net-_D35-K_)=12 V(Net-_D36-A_)=-12 \n.tran 10ms 1s uic\n.control\nrun\nplot V(\"/root/Comparator-1/NonInvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") \n     + V(\"/Output-1\") V(\"/root/Comparator-2/NonInvertingInput\")\n     + title \"Comparator1 Output\" \nplot V(\"/root/Comparator-1/NonInvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\")\n     + V(\"/InvertedOutput-1\") V(\"/root/Comparator-2/NonInvertingInput\")\n     + title \"Comparator1 Inverted-Output\"\nplot V(\"/root/Comparator-2/InvertingInput\") \n     + V(\"/root/Comparator-2/NonInvertingInput\")   \n     + V(\"/Output-2\") V(\"/root/Comparator-1/NonInvertingInput\") \n     + title \"Comparator2 Output\" \nplot V(\"/root/Comparator-2/InvertingInput\")\n     + V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/InvertedOutput-2\") V(\"/root/Comparator-1/NonInvertingInput\") \n     + title \"Comparator2 Inverted-Output\"\n.endc"
 		(exclude_from_sim no)
-		(at 105.664 168.91 0)
+		(at 102.108 168.91 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2447,6 +2447,16 @@
 			(type default)
 		)
 		(uuid "26bd7c8f-f114-4d93-87e6-7b439da8ad4d")
+	)
+	(wire
+		(pts
+			(xy 153.67 107.95) (xy 163.83 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "284911c1-50d9-4a6f-a3c0-973c1bd545b5")
 	)
 	(wire
 		(pts
@@ -2940,6 +2950,16 @@
 	)
 	(wire
 		(pts
+			(xy 153.67 118.11) (xy 165.1 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ab54c86-dcee-499d-b18b-784ff3a2a580")
+	)
+	(wire
+		(pts
 			(xy 40.64 123.19) (xy 40.64 121.92)
 		)
 		(stroke
@@ -2987,16 +3007,6 @@
 			(type default)
 		)
 		(uuid "85bdea93-1010-4dcf-815b-0ac1e016a5c8")
-	)
-	(wire
-		(pts
-			(xy 155.575 109.855) (xy 164.465 109.855)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "86a0d060-ba00-4cca-8c25-578efd88f72b")
 	)
 	(wire
 		(pts
@@ -3197,16 +3207,6 @@
 			(type default)
 		)
 		(uuid "a0331076-4004-49bc-9cd3-426e6ea6d60c")
-	)
-	(wire
-		(pts
-			(xy 155.575 116.205) (xy 164.465 116.205)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a3941314-b884-4b58-83cb-4ca5e6bdafd4")
 	)
 	(wire
 		(pts
@@ -3820,7 +3820,7 @@
 		)
 	)
 	(label "+v"
-		(at 164.465 109.855 0)
+		(at 163.83 107.95 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3840,7 +3840,7 @@
 		(uuid "378c5c6f-444a-4a14-bb73-ba0e8659ea37")
 	)
 	(label "{slash}Comparator-2{slash}InvertingInput"
-		(at 72.39 91.44 0)
+		(at 73.66 91.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3970,7 +3970,7 @@
 		(uuid "68496cda-88e6-4d75-a96d-611eebe42d39")
 	)
 	(label "-v"
-		(at 164.465 116.205 0)
+		(at 165.1 118.11 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4615,7 +4615,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "Rtot=100k w=0.3"
+		(property "Sim.Params" "Rtot=100k w=0.7"
 			(at 27.94 134.62 0)
 			(effects
 				(font
@@ -5010,7 +5010,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "y1=-5 y2=5 td=100ms tr=100ms tf=100ms tw=600ms np=1"
+		(property "Sim.Params" "y1=-12  y2=12 td=100ms tr=100ms tf=100ms tw=600ms np=1"
 			(at 100.584 158.242 90)
 			(effects
 				(font
@@ -7295,7 +7295,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "Rtot=100k w=0.7"
+		(property "Sim.Params" "Rtot=100k w=0.6"
 			(at 29.21 46.99 0)
 			(effects
 				(font
@@ -7890,7 +7890,7 @@
 		(at 29.21 168.91 270)
 		(mirror x)
 		(unit 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board no)
 		(dnp yes)
@@ -11071,7 +11071,7 @@
 		)
 	)
 	(sheet
-		(at 135.89 105.41)
+		(at 133.985 105.41)
 		(size 19.685 15.24)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11087,7 +11087,7 @@
 		)
 		(uuid "a32d4096-98d0-4ae1-9e53-91c41f554141")
 		(property "Sheetname" "PowerSupply"
-			(at 135.89 104.6984 0)
+			(at 133.985 104.6984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11096,7 +11096,7 @@
 			)
 		)
 		(property "Sheetfile" "power_supply.kicad_sch"
-			(at 135.89 121.2346 0)
+			(at 133.985 121.2346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11105,7 +11105,7 @@
 			)
 		)
 		(pin "+12v" output
-			(at 155.575 109.855 0)
+			(at 153.67 107.95 0)
 			(uuid "d37c7059-3184-4d4e-8c98-fd2c8b1ac01e")
 			(effects
 				(font
@@ -11115,7 +11115,7 @@
 			)
 		)
 		(pin "-12v" output
-			(at 155.575 116.205 0)
+			(at 153.67 118.11 0)
 			(uuid "2361364f-a208-4b5f-afa6-bb2f0cf35dad")
 			(effects
 				(font
