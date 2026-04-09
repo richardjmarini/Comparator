@@ -2440,6 +2440,16 @@
 	)
 	(wire
 		(pts
+			(xy 41.91 63.5) (xy 41.91 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2356bc81-7165-40c7-b2e6-938d817ae0b2")
+	)
+	(wire
+		(pts
 			(xy 62.23 116.84) (xy 68.58 116.84)
 		)
 		(stroke
@@ -3170,6 +3180,16 @@
 	)
 	(wire
 		(pts
+			(xy 39.37 63.5) (xy 41.91 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9abd13b9-65a9-4254-a1a2-4aa74b457054")
+	)
+	(wire
+		(pts
 			(xy 41.91 66.04) (xy 44.45 66.04)
 		)
 		(stroke
@@ -3317,6 +3337,16 @@
 			(type default)
 		)
 		(uuid "b3308413-573e-43b0-a604-58db324e5227")
+	)
+	(wire
+		(pts
+			(xy 39.37 60.96) (xy 41.91 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b589d3fa-8d5f-4eb5-8eae-405c54edb0ae")
 	)
 	(wire
 		(pts
@@ -3517,16 +3547,6 @@
 			(type default)
 		)
 		(uuid "d956f752-c461-4699-a7c4-4cfb3f81ccf7")
-	)
-	(wire
-		(pts
-			(xy 39.37 60.96) (xy 39.37 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db04a85a-8b19-4dc9-b2f0-40ed0287de6d")
 	)
 	(wire
 		(pts
@@ -4465,10 +4485,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "0b86d9a1-9359-4abd-8741-383227d487e8")
 		(property "Reference" "R8"
-			(at 48.26 59.69 90)
+			(at 49.784 60.706 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4476,7 +4495,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 48.26 62.23 90)
+			(at 49.784 63.246 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4615,7 +4634,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "Rtot=100k w=0.7"
+		(property "Sim.Params" "Rtot=100k w=0.25"
 			(at 27.94 134.62 0)
 			(effects
 				(font
@@ -6627,6 +6646,71 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 41.91 60.96 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6a4023c8-4509-4294-9025-defe7755617e")
+		(property "Reference" "#PWR012"
+			(at 41.91 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 41.91 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 41.91 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1ab5f320-ac8e-437d-a315-6fa34003eacc")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 49.53 38.1 0)
 		(mirror y)
 		(unit 1)
@@ -7294,7 +7378,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "Rtot=100k w=0.6"
+		(property "Sim.Params" "Rtot=100k w=0.75"
 			(at 29.21 46.99 0)
 			(effects
 				(font
@@ -8324,7 +8408,7 @@
 		(dnp no)
 		(uuid "a52f8f31-121f-4543-be1f-8e3226f0e31d")
 		(property "Reference" "R9"
-			(at 47.752 94.996 90)
+			(at 51.054 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8332,7 +8416,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 47.752 97.536 90)
+			(at 51.054 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9018,17 +9102,16 @@
 		(dnp no)
 		(uuid "b9cb8431-7b3c-4693-8cdc-fa0bb0293310")
 		(property "Reference" "C11"
-			(at 44.45 93.9799 0)
+			(at 43.18 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 		(property "Value" "1uf"
-			(at 34.036 95.758 0)
+			(at 43.434 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
