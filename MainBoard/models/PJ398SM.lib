@@ -1,7 +1,9 @@
-* No R_sleeve here — ground connection handled externally
+* PJ398SM jack model
+* PLUGGED=0 → no cable (normalled, SW shorted to T)
+* PLUGGED=1 → cable inserted (SW disconnected from T)
 
-.subckt PJ398SM S SW T
+.subckt PJ398SM S SW T PARAMS: PLUGGED=0
 
-R_normal  T SW  1m       ; SW always connected to T (no plug inserted)
+R_norm  T SW  {1m + PLUGGED * 1G}
 
-.ends
+.ends PJ398SM

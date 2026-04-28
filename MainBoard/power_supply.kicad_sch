@@ -1567,12 +1567,6 @@
 		)
 	)
 	(junction
-		(at 217.17 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0ac1b99e-8f0f-4dcf-8a6b-8a497b826992")
-	)
-	(junction
 		(at 166.37 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1595,6 +1589,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6de36cae-4f39-4286-9e1a-e000adcbae19")
+	)
+	(junction
+		(at 80.01 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "71208e22-18c3-4e78-9494-95a894cb94f3")
 	)
 	(junction
 		(at 128.27 104.14)
@@ -1625,6 +1625,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ac739097-ce25-4b8a-9dd8-d97ff52c2c0a")
+	)
+	(junction
+		(at 80.01 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b243011e-3c23-421f-9c6c-d1bf4bd6131c")
 	)
 	(junction
 		(at 176.53 102.87)
@@ -1756,16 +1762,6 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 77.47) (xy 217.17 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11571c60-69f7-4f63-af40-83221a0f35b7")
-	)
-	(wire
-		(pts
 			(xy 124.46 86.36) (xy 128.27 86.36)
 		)
 		(stroke
@@ -1853,16 +1849,6 @@
 			(type default)
 		)
 		(uuid "291fbbaa-69d4-49ca-be77-4ee860a4e6c6")
-	)
-	(wire
-		(pts
-			(xy 217.17 102.87) (xy 217.17 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2a24d964-d018-44aa-9319-1c42e9422627")
 	)
 	(wire
 		(pts
@@ -2136,13 +2122,13 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 77.47) (xy 224.79 77.47)
+			(xy 74.93 110.49) (xy 80.01 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7ea87064-580c-4eab-a91b-004fb3e9f2a5")
+		(uuid "7eb58ae4-d2ff-49b1-bf5f-d70835c80bac")
 	)
 	(wire
 		(pts
@@ -2173,16 +2159,6 @@
 			(type default)
 		)
 		(uuid "868af647-781b-42ac-a094-b6223f58abf8")
-	)
-	(wire
-		(pts
-			(xy 217.17 110.49) (xy 224.79 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "86ac8df9-7cda-4e32-9698-b24f1fd31f41")
 	)
 	(wire
 		(pts
@@ -2236,6 +2212,16 @@
 	)
 	(wire
 		(pts
+			(xy 74.93 77.47) (xy 80.01 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa97b438-ba63-46a0-921c-5d6bf9b0475c")
+	)
+	(wire
+		(pts
 			(xy 139.7 102.87) (xy 143.51 102.87)
 		)
 		(stroke
@@ -2283,16 +2269,6 @@
 			(type default)
 		)
 		(uuid "bfc2ca1e-11d2-454b-930d-bcbff9ec3d87")
-	)
-	(wire
-		(pts
-			(xy 217.17 92.71) (xy 224.79 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c1101504-1e6b-421b-b429-f88386675a1e")
 	)
 	(wire
 		(pts
@@ -2464,29 +2440,7 @@
 		)
 		(uuid "a3d5733f-4820-42c1-8444-32e5f81f2202")
 	)
-	(hierarchical_label "+12v"
-		(shape output)
-		(at 224.79 77.47 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8d298485-ddf6-4e5a-9937-aa5df4618bab")
-	)
-	(hierarchical_label "-12v"
-		(shape output)
-		(at 224.79 110.49 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8ef4a82a-6c25-42b4-9578-dcd6040e70d9")
-	)
-	(hierarchical_label "-12v"
+	(hierarchical_label "-v"
 		(shape output)
 		(at 199.39 102.87 0)
 		(effects
@@ -2497,7 +2451,7 @@
 		)
 		(uuid "d46f81ca-11b5-4bdb-b4aa-d3e7e5548a92")
 	)
-	(hierarchical_label "+12v"
+	(hierarchical_label "+v"
 		(shape output)
 		(at 199.39 82.55 0)
 		(effects
@@ -2551,7 +2505,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Shockley (PNPN) diode"
+		(property "Description" "D_Schottky (PNPN) diode"
 			(at 193.04 102.87 0)
 			(effects
 				(font
@@ -2709,7 +2663,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_THT:D_DO-201_P12.70mm_Horizontal"
 			(at 160.655 87.63 0)
 			(effects
 				(font
@@ -2782,104 +2736,6 @@
 			(project "MainBoard"
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/a32d4096-98d0-4ae1-9e53-91c41f554141"
 					(reference "D35")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Simulation_SPICE:VDC")
-		(at 217.17 87.63 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp yes)
-		(uuid "3a0de1f0-9b3e-4a72-b73a-3a6a3dd07982")
-		(property "Reference" "V2"
-			(at 222.25 86.614 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "12"
-			(at 222.25 89.154 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 217.17 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
-			(at 217.17 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Voltage source, DC"
-			(at 217.17 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=+ 2=-"
-			(at 217.17 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "DC"
-			(at 217.17 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "V"
-			(at 217.17 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "56a18317-be95-4d2c-9e80-37e2937d0efe")
-		)
-		(pin "1"
-			(uuid "fb31dd60-1cd5-439d-b874-916262472a02")
-		)
-		(instances
-			(project "MainBoard"
-				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/a32d4096-98d0-4ae1-9e53-91c41f554141"
-					(reference "V2")
 					(unit 1)
 				)
 			)
@@ -3262,17 +3118,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 224.79 92.71 90)
-		(mirror x)
+		(lib_id "power:PWR_FLAG")
+		(at 74.93 110.49 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "73c574ba-692f-4c23-af67-c2179f7d7038")
-		(property "Reference" "#PWR011"
-			(at 231.14 92.71 0)
+		(fields_autoplaced yes)
+		(uuid "78e753f4-7602-48be-8548-5633edb0d9a6")
+		(property "Reference" "#FLG03"
+			(at 73.025 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3280,16 +3136,17 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 228.854 92.71 0)
+		(property "Value" "PWR_FLAG"
+			(at 71.12 110.4899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 224.79 92.71 0)
+			(at 74.93 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3297,8 +3154,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 224.79 92.71 0)
+		(property "Datasheet" "~"
+			(at 74.93 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3306,8 +3163,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 224.79 92.71 0)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 74.93 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3316,12 +3173,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "b5f96ea4-9f6a-407c-a6c3-c0636eedb733")
+			(uuid "acb39c70-f63a-4662-aa50-a04469b0f19a")
 		)
 		(instances
 			(project "MainBoard"
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/a32d4096-98d0-4ae1-9e53-91c41f554141"
-					(reference "#PWR011")
+					(reference "#FLG03")
 					(unit 1)
 				)
 			)
@@ -3440,7 +3297,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Shockley (PNPN) diode"
+		(property "Description" "Schottky (PNPN) diode"
 			(at 193.04 82.55 0)
 			(effects
 				(font
@@ -3736,7 +3593,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "Diode_THT:D_DO-201_P15.24mm_Horizontal"
 			(at 160.655 97.79 0)
 			(effects
 				(font
@@ -3824,7 +3681,7 @@
 		(on_board no)
 		(dnp yes)
 		(uuid "9f052ee5-b0d6-44d9-8b0b-960f026dba31")
-		(property "Reference" "V6"
+		(property "Reference" "V2"
 			(at 85.344 96.52 0)
 			(effects
 				(font
@@ -3906,7 +3763,7 @@
 		(instances
 			(project "MainBoard"
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/a32d4096-98d0-4ae1-9e53-91c41f554141"
-					(reference "V6")
+					(reference "V2")
 					(unit 1)
 				)
 			)
@@ -3922,7 +3779,7 @@
 		(on_board no)
 		(dnp yes)
 		(uuid "aa68ae1b-558c-4abd-b9bb-d2e51a3c794e")
-		(property "Reference" "V4"
+		(property "Reference" "V1"
 			(at 85.09 86.614 0)
 			(effects
 				(font
@@ -4004,7 +3861,7 @@
 		(instances
 			(project "MainBoard"
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/a32d4096-98d0-4ae1-9e53-91c41f554141"
-					(reference "V4")
+					(reference "V1")
 					(unit 1)
 				)
 			)
@@ -4071,104 +3928,6 @@
 			(project "MainBoard"
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/a32d4096-98d0-4ae1-9e53-91c41f554141"
 					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Simulation_SPICE:VDC")
-		(at 217.17 97.79 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp yes)
-		(uuid "b7335001-fa4f-4dd0-8936-da8a979275c4")
-		(property "Reference" "V3"
-			(at 222.504 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "-12"
-			(at 223.774 98.806 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 217.17 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
-			(at 217.17 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Voltage source, DC"
-			(at 217.17 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=+ 2=-"
-			(at 217.17 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "DC"
-			(at 217.17 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "V"
-			(at 217.17 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "1d4f98b6-03ea-4290-a505-cebec9b418c6")
-		)
-		(pin "1"
-			(uuid "ae6ba400-8be0-4e97-a44f-62e87085b27f")
-		)
-		(instances
-			(project "MainBoard"
-				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/a32d4096-98d0-4ae1-9e53-91c41f554141"
-					(reference "V3")
 					(unit 1)
 				)
 			)
@@ -4450,6 +4209,73 @@
 			(project "MainBoard"
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/a32d4096-98d0-4ae1-9e53-91c41f554141"
 					(reference "F4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 74.93 77.47 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f3d0ca0a-3ecb-410c-8925-41f5bb290d79")
+		(property "Reference" "#FLG02"
+			(at 73.025 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 71.12 77.4699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 74.93 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 74.93 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 74.93 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e144b625-8481-4eab-afbd-967d0cb06af6")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef/a32d4096-98d0-4ae1-9e53-91c41f554141"
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)

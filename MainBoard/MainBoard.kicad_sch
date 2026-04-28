@@ -2079,7 +2079,7 @@
 		)
 		(uuid "4a86bc94-057a-4c24-9a3d-1ada699093ff")
 	)
-	(text ".options method=gear gmin=1e-9 cshunt=1e-12 \n.options reltol=1e-2 abstol=1e-9 vntol=1e-6 \n.options itl1=300 itl4=300 \n.options maxstep=100u temp=60\n.ic V(Net-_D35-K_)=12 V(Net-_D36-A_)=-12 \n.tran 10ms 1s uic\n.control\nrun\nplot V(\"/root/Comparator-1/NonInvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") \n     + V(\"/Output-1\") V(\"/root/Comparator-2/NonInvertingInput\")\n     + title \"Comparator1 Output\" \nplot V(\"/root/Comparator-1/NonInvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\")\n     + V(\"/InvertedOutput-1\") V(\"/root/Comparator-2/NonInvertingInput\")\n     + title \"Comparator1 Inverted-Output\"\nplot V(\"/root/Comparator-2/InvertingInput\") \n     + V(\"/root/Comparator-2/NonInvertingInput\")   \n     + V(\"/Output-2\") V(\"/root/Comparator-1/NonInvertingInput\") \n     + title \"Comparator2 Output\" \nplot V(\"/root/Comparator-2/InvertingInput\")\n     + V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/InvertedOutput-2\") V(\"/root/Comparator-1/NonInvertingInput\") \n     + title \"Comparator2 Inverted-Output\"\n.endc"
+	(text ".options method=gear gmin=1e-9 cshunt=1e-12 \n.options reltol=1e-2 abstol=1e-9 vntol=1e-6 \n.options itl1=300 itl4=300 \n.options maxstep=100u temp=60\n.ic V(Net-_D35-K_)=12 V(Net-_D36-A_)=-12 V(Net-_C9-Pad1_)=6 V(Net-_C10-Pad1_)=-6\n.tran 10ms 1s uic\n.control\nrun\nplot V(\"/root/Comparator-1/NonInvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") \n     + V(\"/Output-1\") \n     + title \"Comparator1 Output\" \nplot V(\"/root/Comparator-1/NonInvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\")\n     + V(\"/InvertedOutput-1\") \n     + title \"Comparator1 Inverted-Output\"\nplot V(\"/root/Comparator-2/InvertingInput\") \n     + V(\"/root/Comparator-2/NonInvertingInput\")   \n     + V(\"/Output-2\")\n     + title \"Comparator2 Output\" \nplot V(\"/root/Comparator-2/InvertingInput\")\n     + V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/InvertedOutput-2\")\n     + title \"Comparator2 Inverted-Output\"\n.endc"
 		(exclude_from_sim no)
 		(at 102.108 168.91 0)
 		(effects
@@ -2245,12 +2245,6 @@
 		(uuid "940e400e-da1a-4662-a4a3-4687647cb202")
 	)
 	(junction
-		(at 53.34 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9a5347db-8a7a-429f-a29e-799485ff23de")
-	)
-	(junction
 		(at 250.19 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2267,6 +2261,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b151619a-c760-40ae-9c64-5586666db04f")
+	)
+	(junction
+		(at 46.99 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ba024e38-2a28-435e-9032-755017c9d840")
 	)
 	(junction
 		(at 58.42 66.04)
@@ -2337,6 +2337,16 @@
 			(type default)
 		)
 		(uuid "0a806fc9-ad01-43a5-85e4-f13f459a7962")
+	)
+	(wire
+		(pts
+			(xy 48.26 66.04) (xy 46.99 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b2bef23-41a0-4b24-8e30-275927be0a3a")
 	)
 	(wire
 		(pts
@@ -2430,6 +2440,16 @@
 	)
 	(wire
 		(pts
+			(xy 55.88 66.04) (xy 58.42 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f8f4825-6724-4362-b5c5-feba3b8659b6")
+	)
+	(wire
+		(pts
 			(xy 39.37 116.84) (xy 48.26 116.84)
 		)
 		(stroke
@@ -2457,16 +2477,6 @@
 			(type default)
 		)
 		(uuid "2548a5bb-b9d9-430b-a832-01f2b31052a2")
-	)
-	(wire
-		(pts
-			(xy 53.34 66.04) (xy 58.42 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "26bd7c8f-f114-4d93-87e6-7b439da8ad4d")
 	)
 	(wire
 		(pts
@@ -2620,7 +2630,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 66.04) (xy 53.34 88.9)
+			(xy 46.99 66.04) (xy 46.99 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2770,16 +2780,6 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 66.04) (xy 53.34 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6460a7a9-4065-488e-ae75-3114580742c3")
-	)
-	(wire
-		(pts
 			(xy 242.57 102.87) (xy 242.57 104.14)
 		)
 		(stroke
@@ -2800,7 +2800,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 91.44) (xy 67.31 91.44)
+			(xy 55.88 91.44) (xy 67.31 91.44)
 		)
 		(stroke
 			(width 0)
@@ -3190,7 +3190,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 66.04) (xy 44.45 66.04)
+			(xy 41.91 66.04) (xy 46.99 66.04)
 		)
 		(stroke
 			(width 0)
@@ -3250,7 +3250,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 91.44) (xy 43.18 91.44)
+			(xy 40.64 91.44) (xy 48.26 91.44)
 		)
 		(stroke
 			(width 0)
@@ -3450,7 +3450,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 88.9) (xy 53.34 88.9)
+			(xy 39.37 88.9) (xy 46.99 88.9)
 		)
 		(stroke
 			(width 0)
@@ -3849,16 +3849,6 @@
 		)
 		(uuid "34ba975e-69e9-4649-8524-83bd1b9bf3ca")
 	)
-	(label "root{slash}Comparator-1{slash}NonInvertingInput"
-		(at 38.1 154.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "378c5c6f-444a-4a14-bb73-ba0e8659ea37")
-	)
 	(label "root{slash}Comparator-2{slash}InvertingInput"
 		(at 73.66 91.44 0)
 		(effects
@@ -3888,6 +3878,16 @@
 			(justify left bottom)
 		)
 		(uuid "4274fd31-86ca-4466-a277-934cb0a1e5a5")
+	)
+	(label "Net-_C12-Pad1_"
+		(at 38.1 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "44048a46-d6f8-4699-919c-269cdc2fe094")
 	)
 	(label "+v"
 		(at 27.94 129.54 0)
@@ -3968,6 +3968,16 @@
 			(justify left bottom)
 		)
 		(uuid "61e1d34d-b291-46bc-943e-6c528ead9aad")
+	)
+	(label "Net-_C11-Pad1_"
+		(at 38.1 168.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "632517c2-7a64-485a-80fd-8b2fd6970c5c")
 	)
 	(label "+v"
 		(at 233.68 19.05 0)
@@ -4098,16 +4108,6 @@
 			(justify left bottom)
 		)
 		(uuid "968d8daa-1886-44f4-8ab9-880e78da17e0")
-	)
-	(label "root{slash}Comparator-1{slash}InvertingInput"
-		(at 38.1 168.91 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "96c54c82-bd57-4e6b-bc2c-20a92bbd5c13")
 	)
 	(label "+v"
 		(at 58.42 55.88 0)
@@ -4478,7 +4478,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 48.26 66.04 90)
+		(at 52.07 66.04 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4487,7 +4487,7 @@
 		(dnp no)
 		(uuid "0b86d9a1-9359-4abd-8741-383227d487e8")
 		(property "Reference" "R8"
-			(at 49.784 60.706 90)
+			(at 53.594 60.706 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4495,7 +4495,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 49.784 63.246 90)
+			(at 53.594 63.246 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4503,7 +4503,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
-			(at 48.26 64.262 90)
+			(at 52.07 64.262 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4512,7 +4512,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 48.26 66.04 0)
+			(at 52.07 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4521,7 +4521,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 48.26 66.04 0)
+			(at 52.07 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4928,6 +4928,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Params" "PLUGGED=1"
+			(at 261.62 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6a2f9582-7693-4ede-8291-4d4e4a97a5bc")
 		)
@@ -4956,8 +4965,8 @@
 		(on_board no)
 		(dnp yes)
 		(uuid "12fd626d-ddeb-4c2a-a234-395b460fab07")
-		(property "Reference" "V1"
-			(at 30.988 162.814 90)
+		(property "Reference" "V3"
+			(at 28.194 151.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5047,7 +5056,7 @@
 		(instances
 			(project "Comparator"
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
-					(reference "V1")
+					(reference "V3")
 					(unit 1)
 				)
 			)
@@ -5357,6 +5366,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Params" "PLUGGED=1"
+			(at 257.81 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a34da575-869f-462e-a94e-e8f0a0065122")
 		)
@@ -5627,6 +5645,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Params" "PLUGGED=1"
+			(at 257.81 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d828776c-b976-4794-8f62-a6d54c714fd3")
 		)
@@ -5653,10 +5680,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "412f55ee-2848-406b-8855-9ae1c958f60d")
 		(property "Reference" "C12"
-			(at 45.72 68.5799 0)
+			(at 36.068 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5665,7 +5691,7 @@
 			)
 		)
 		(property "Value" "1uf"
-			(at 45.72 71.1199 0)
+			(at 36.068 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5673,7 +5699,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
 			(at 42.8752 73.66 0)
 			(effects
 				(font
@@ -6073,6 +6099,15 @@
 			)
 		)
 		(property "Sim.Pins" "1=S 2=SW 3=T"
+			(at 31.75 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "PLUGGED=0"
 			(at 31.75 86.36 0)
 			(effects
 				(font
@@ -6802,7 +6837,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
 			(at 50.4952 36.83 0)
 			(effects
 				(font
@@ -6935,7 +6970,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
 			(at 261.62 125.73 0)
 			(effects
 				(font
@@ -7210,7 +7245,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
 			(at 257.81 100.33 0)
 			(effects
 				(font
@@ -7973,13 +8008,13 @@
 		(at 29.21 168.91 270)
 		(mirror x)
 		(unit 1)
-		(exclude_from_sim yes)
+		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
 		(dnp yes)
 		(uuid "9383376a-fea8-4976-ae27-c38ebab1ccb3")
-		(property "Reference" "V5"
-			(at 25.4 161.544 90)
+		(property "Reference" "V4"
+			(at 28.194 164.592 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7988,7 +8023,7 @@
 			)
 		)
 		(property "Value" "VSIN"
-			(at 25.4 164.084 90)
+			(at 27.432 173.228 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8069,7 +8104,7 @@
 		(instances
 			(project ""
 				(path "/352c6875-c6d9-4d1a-ab6d-2f7b57ab28ef"
-					(reference "V5")
+					(reference "V4")
 					(unit 1)
 				)
 			)
@@ -8102,7 +8137,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
 			(at 49.2252 124.46 0)
 			(effects
 				(font
@@ -8276,6 +8311,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Params" "PLUGGED=1"
+			(at 261.62 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "93cfc903-3910-4450-8226-507f9ecc8125")
 		)
@@ -8319,7 +8363,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
 			(at 257.81 40.64 0)
 			(effects
 				(font
@@ -8399,7 +8443,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 46.99 91.44 90)
+		(at 52.07 91.44 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8408,7 +8452,7 @@
 		(dnp no)
 		(uuid "a52f8f31-121f-4543-be1f-8e3226f0e31d")
 		(property "Reference" "R9"
-			(at 51.054 93.98 90)
+			(at 56.134 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8416,7 +8460,7 @@
 			)
 		)
 		(property "Value" "1k"
-			(at 51.054 96.52 90)
+			(at 56.134 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8424,7 +8468,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
-			(at 46.99 89.662 90)
+			(at 52.07 89.662 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8433,7 +8477,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 46.99 91.44 0)
+			(at 52.07 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8442,7 +8486,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 46.99 91.44 0)
+			(at 52.07 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8596,7 +8640,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
 			(at 261.62 66.04 0)
 			(effects
 				(font
@@ -9119,7 +9163,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
 			(at 41.6052 99.06 0)
 			(effects
 				(font
@@ -10671,6 +10715,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Params" "PLUGGED=1"
+			(at 31.75 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "5d1510bb-afd0-490a-8fa1-5c24964392e1")
 		)
@@ -11185,9 +11238,9 @@
 				(justify left top)
 			)
 		)
-		(pin "+12v" output
+		(pin "+v" output
 			(at 153.67 107.95 0)
-			(uuid "d37c7059-3184-4d4e-8c98-fd2c8b1ac01e")
+			(uuid "17101fe5-02ad-466a-876e-17496eb56cc2")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11195,9 +11248,9 @@
 				(justify right)
 			)
 		)
-		(pin "-12v" output
+		(pin "-v" output
 			(at 153.67 118.11 0)
-			(uuid "2361364f-a208-4b5f-afa6-bb2f0cf35dad")
+			(uuid "69ae9f69-f38d-4662-951b-0d0d5fc2c8c7")
 			(effects
 				(font
 					(size 1.27 1.27)

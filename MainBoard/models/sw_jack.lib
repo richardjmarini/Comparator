@@ -1,0 +1,2 @@
+.model SW_JACK VSWITCH(RON=1m ROFF=1G VT=0.5 VH=0.1)
+
