@@ -2079,7 +2079,7 @@
 		)
 		(uuid "4a86bc94-057a-4c24-9a3d-1ada699093ff")
 	)
-	(text ".options method=gear gmin=1e-9 cshunt=1e-12 \n.options reltol=1e-2 abstol=1e-9 vntol=1e-6 \n.options itl1=300 itl4=300 \n.options maxstep=100u temp=60\n.ic V(Net-_D35-K_)=12 V(Net-_D36-A_)=-12 V(Net-_C9-Pad1_)=6 V(Net-_C10-Pad1_)=-6\n.tran 10ms 1s uic\n.control\nrun\nplot V(\"/root/Comparator-1/NonInvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") \n     + V(\"/Output-1\") \n     + title \"Comparator1 Output\" \nplot V(\"/root/Comparator-1/NonInvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\")\n     + V(\"/InvertedOutput-1\") \n     + title \"Comparator1 Inverted-Output\"\nplot V(\"/root/Comparator-2/InvertingInput\") \n     + V(\"/root/Comparator-2/NonInvertingInput\")   \n     + V(\"/Output-2\")\n     + title \"Comparator2 Output\" \nplot V(\"/root/Comparator-2/InvertingInput\")\n     + V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/InvertedOutput-2\")\n     + title \"Comparator2 Inverted-Output\"\n.endc"
+	(text ".options method=gear gmin=1e-9 cshunt=1e-12 \n.options reltol=1e-2 abstol=1e-9 vntol=1e-6 \n.options itl1=300 itl4=300 \n.options maxstep=100u temp=60\n.ic V(Net-_D35-K_)=12 V(Net-_D36-A_)=-12 V(Net-_C9-Pad1_)=6 V(Net-_C10-Pad1_)=-6\n.tran 10ms 3s uic\n.control\nrun\nplot V(\"/root/Comparator-1/NonInvertingInput\") \n     + V(\"/root/Comparator-1/InvertingInput\") \n     + V(\"/Output-1\") \n     + title \"Comparator1 Output\" \nplot V(\"/root/Comparator-1/NonInvertingInput\")\n     + V(\"/root/Comparator-1/InvertingInput\")\n     + V(\"/InvertedOutput-1\") \n     + title \"Comparator1 Inverted-Output\"\nplot V(\"/root/Comparator-2/InvertingInput\") \n     + V(\"/root/Comparator-2/NonInvertingInput\")   \n     + V(\"/Output-2\")\n     + title \"Comparator2 Output\" \nplot V(\"/root/Comparator-2/InvertingInput\")\n     + V(\"/root/Comparator-2/NonInvertingInput\") \n     + V(\"/InvertedOutput-2\")\n     + title \"Comparator2 Inverted-Output\"\n.endc"
 		(exclude_from_sim no)
 		(at 102.108 168.91 0)
 		(effects
@@ -2281,6 +2281,12 @@
 		(uuid "c342ba81-2e2d-4e7d-8909-8e95aa0b2eb8")
 	)
 	(junction
+		(at 250.19 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d28b9d0d-0a86-4c62-9329-7278877f3606")
+	)
+	(junction
 		(at 217.17 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2297,6 +2303,10 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fbbe1111-6e77-4392-847e-6bfe5517a054")
+	)
+	(no_connect
+		(at 245.11 86.36)
+		(uuid "50465866-b27a-4695-92ce-4c022450a842")
 	)
 	(wire
 		(pts
@@ -2657,6 +2667,16 @@
 			(type default)
 		)
 		(uuid "4f557413-44ee-4ffa-b567-e72d17ad16cf")
+	)
+	(wire
+		(pts
+			(xy 252.73 86.36) (xy 250.19 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "503a77fa-694b-49c4-b73e-b343aadc2867")
 	)
 	(wire
 		(pts
@@ -3590,7 +3610,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 86.36) (xy 250.19 86.36)
+			(xy 245.11 86.36) (xy 250.19 86.36)
 		)
 		(stroke
 			(width 0)
@@ -3879,7 +3899,7 @@
 		)
 		(uuid "4274fd31-86ca-4466-a277-934cb0a1e5a5")
 	)
-	(label "Net-_C12-Pad1_"
+	(label "InputSignal1"
 		(at 38.1 154.94 0)
 		(effects
 			(font
@@ -3969,7 +3989,7 @@
 		)
 		(uuid "61e1d34d-b291-46bc-943e-6c528ead9aad")
 	)
-	(label "Net-_C11-Pad1_"
+	(label "InputSignal2"
 		(at 38.1 168.91 0)
 		(effects
 			(font
@@ -4008,6 +4028,16 @@
 			(justify left bottom)
 		)
 		(uuid "7002b0d7-06a5-4824-bf00-7645279f0525")
+	)
+	(label "InputThreshold1"
+		(at 49.53 29.21 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "75ef3706-3bb0-4485-89c4-855ba6f4812a")
 	)
 	(label "Comparator-1{slash}Output"
 		(at 213.36 29.21 180)
@@ -4098,16 +4128,6 @@
 			(justify left bottom)
 		)
 		(uuid "94f4249d-6edf-449a-95c7-5135e9725cf9")
-	)
-	(label "NC_J8P2"
-		(at 242.57 86.36 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "968d8daa-1886-44f4-8ab9-880e78da17e0")
 	)
 	(label "+v"
 		(at 58.42 55.88 0)
@@ -4220,6 +4240,26 @@
 		)
 		(uuid "c5460d3c-fbdf-4c7c-bb73-ff11940c93f2")
 	)
+	(label "InputSignal2"
+		(at 46.99 91.44 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c5d0b996-2a1e-4d41-abf7-2bc141bed1d2")
+	)
+	(label "InputThreshold2"
+		(at 48.26 116.84 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c720d8d4-9810-42e9-ac38-359f9fccd886")
+	)
 	(label "+v"
 		(at 157.48 66.04 0)
 		(effects
@@ -4299,6 +4339,16 @@
 			(justify left bottom)
 		)
 		(uuid "f6e77153-5f51-4131-9124-2b62560a94e6")
+	)
+	(label "InputSignal1"
+		(at 46.99 66.04 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fccdbe40-2c95-4c27-8796-76b5fac392a2")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -5038,7 +5088,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "y1=-12  y2=12 td=100ms tr=100ms tf=100ms tw=600ms np=1"
+		(property "Sim.Params" "y1=-12 y2=12 td=1s tr=100ms tf=100ms tw=600ms per=1 np=1"
 			(at 100.584 158.242 90)
 			(effects
 				(font
@@ -6107,7 +6157,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "PLUGGED=0"
+		(property "Sim.Params" "PLUGGED=1"
 			(at 31.75 86.36 0)
 			(effects
 				(font
@@ -8918,6 +8968,15 @@
 				(hide yes)
 			)
 		)
+		(property "Sim.Params" "PLUGGED=0"
+			(at 33.02 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ac9bb2a8-b718-4ef7-9afd-0fd474b4741f")
 		)
@@ -9146,7 +9205,7 @@
 		(dnp no)
 		(uuid "b9cb8431-7b3c-4693-8cdc-fa0bb0293310")
 		(property "Reference" "C11"
-			(at 43.18 97.79 0)
+			(at 33.782 94.742 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9155,7 +9214,7 @@
 			)
 		)
 		(property "Value" "1uf"
-			(at 43.434 100.33 0)
+			(at 34.036 97.282 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9465,6 +9524,15 @@
 			)
 		)
 		(property "Sim.Pins" "1=S 2=SW 3=T"
+			(at 31.75 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "PLUGGED=0"
 			(at 31.75 121.92 0)
 			(effects
 				(font
